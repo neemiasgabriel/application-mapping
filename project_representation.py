@@ -92,15 +92,15 @@ def main():
 
   for acronym in projects.keys():
     for project in projects[acronym].keys():
-      application_dev_urls = get_application_urls(projects[acronym][project], 'application-dev.properties')
-      application_hml_urls = get_application_urls(projects[acronym][project], 'application-hml.properties')
-      application_prd_urls = get_application_urls(projects[acronym][project], 'application-prd.properties')
-      application_urls = get_application_urls(projects[acronym][project], 'application.properties')
-
       feign_urls = get_feign_urls(projects[acronym][project])
 
       if feign_urls:
         generate_representation(representation, feign_urls, fernanda_projects, project, True)
+
+      application_dev_urls = get_application_urls(projects[acronym][project], 'application-dev.properties')
+      application_hml_urls = get_application_urls(projects[acronym][project], 'application-hml.properties')
+      application_prd_urls = get_application_urls(projects[acronym][project], 'application-prd.properties')
+      application_urls = get_application_urls(projects[acronym][project], 'application.properties')
 
       accessed_applications = set()
 

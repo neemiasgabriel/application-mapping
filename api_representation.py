@@ -1,17 +1,18 @@
+import base64
+import json
 import os
 import re
-import json
-import base64
+
 import gitlab
 import requests
 from dotenv import load_dotenv
+
 from resources import (
   application_properties_files,
   application_properties_regex,
-  feign_folder_regex,
-  feign_url_regex,
   bootstrap_regex,
-  ignored_files,
+  feign_folder_regex,
+  feign_url_regex, ignored_files,
   other_projects_acronym
 )
 
