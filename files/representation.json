@@ -1,46 +1,51 @@
 {
   "cdps": {
+    "cdps-operacoes-clientes-java": [
+      "mcsv-investimentos-fundos-java",
+      "mcsv-converter-informacoes-cliente-java"
+    ],
     "cdps-consultar-informacoes-cliente-java": [
       "pgto-folha-pagamento-java",
-      "pgto-transferencias-java",
-      "mcsv-convenio-guarda-chuva-java"
+      "mcsv-converter-informacoes-cliente-java",
+      "mcsv-convenio-guarda-chuva-java",
+      "pgto-transferencias-java"
     ],
     "cdps-sincronizacao-tabelas-java": [
       "pgto-consumidor-tabelas-sincronizacao-batch-java"
-    ],
-    "cdps-operacoes-clientes-java": [
-      "mcsv-investimentos-fundos-java"
     ]
   },
   "ctas": {
-    "ctas-efetivar-credito-java": [
-      "pgto-transferencia-pix-java",
-      "pgto-produtor-transacoes-pix-varejo-java",
-      "pgto-transferencias-java",
-      "pgto-transferencias-bacen-java"
-    ],
     "ctas-efetivar-debito-java": [
-      "pgto-transferencia-pix-java",
       "pgto-produtor-transacoes-pix-varejo-java",
-      "pgto-transferencias-java",
-      "pgto-transferencias-bacen-java"
+      "pgto-transferencia-pix-java",
+      "pgto-transferencias-bacen-java",
+      "pgto-transferencias-java"
+    ],
+    "ctas-efetivar-credito-java": [
+      "pgto-produtor-transacoes-pix-varejo-java",
+      "pgto-transferencia-pix-java",
+      "pgto-transferencias-bacen-java",
+      "pgto-transferencias-java"
     ],
     "ctas-saldo-java": [
+      "pgto-transferencias-bacen-java",
       "pgto-consumidor-agendamentos-pix-java",
       "pgto-transferencias-java",
-      "mcsv-pagamentos-pix-java",
-      "pgto-transferencias-bacen-java"
+      "mcsv-pagamentos-pix-java"
     ],
     "ctas-sincronizacao-tabelas-java": [
       "pgto-consumidor-tabelas-sincronizacao-batch-java"
     ],
-    "ctas-lancamentos-a-efetivar-java": [
-      "pgto-transferencias-parceiro-java",
-      "pgto-consumer-tef-parceiro-java",
-      "pgto-consumer-devolucao-parceiro-java"
-    ],
     "ctas-validar-aptidao-debito-parceiro-java": [
       "pgto-transferencias-parceiro-java"
+    ],
+    "ctas-lancamentos-a-efetivar-java": [
+      "pgto-transferencias-parceiro-java",
+      "pgto-consumer-devolucao-parceiro-java",
+      "pgto-consumer-tef-parceiro-java"
+    ],
+    "ctas-cmm-rest-java": [
+      "pgto-cmm-rest-java"
     ]
   },
   "tbgr": {
@@ -53,9 +58,9 @@
   },
   "parc": {
     "parc-informacoes-cadastro-java": [
-      "pgto-filtrar-ted-parcerias-java",
       "pgto-notificacao-parceiro-java",
-      "pgto-filtrar-tef-parcerias-java"
+      "pgto-filtrar-tef-parcerias-java",
+      "pgto-filtrar-ted-parcerias-java"
     ]
   },
   "acad": {
