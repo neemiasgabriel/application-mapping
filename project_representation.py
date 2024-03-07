@@ -97,13 +97,10 @@ def main():
       application_prd_urls = get_application_urls(projects[acronym][project], 'application-prd.properties')
       application_urls = get_application_urls(projects[acronym][project], 'application.properties')
 
-      integrations = get_integrations(projects[acronym][project])
+      feign_urls = get_feign_urls(projects[acronym][project])
 
-      if integrations is not None:
-        feign_urls = get_feign_urls(projects[acronym][project])
-
-        if feign_urls:
-          generate_representation(representation, feign_urls, fernanda_projects, project, True)
+      if feign_urls:
+        generate_representation(representation, feign_urls, fernanda_projects, project, True)
 
       accessed_applications = set()
 
