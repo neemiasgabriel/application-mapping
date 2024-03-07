@@ -57,7 +57,32 @@ def add_entry(representation, acronym, project):
 
   return representation
 
+def append_feign_to_representation(representation, fernanda_acronym, projects_name_list, application, project):
+  for project_name in projects_name_list:
+    current_name = project_name.replace('.url', '')
 
+    if current_name in application:
+      current_name = project_name.replace('.url', '').replace('.', '-')
+      representation = add_entry(representation, fernanda_acronym, current_name)
+      representation[fernanda_acronym][current_name].append(project)
+
+def append_application_files_to_representation(representation, fernanda_acronym, projects_name_list, application, project):
+  for project_name in projects_name_list:
+    current_name = project_name.replace('.url', '').replace('.', '-')
+
+    if current_name in application:
+      representation = add_entry(representation, fernanda_acronym, current_name)
+      representation[fernanda_acronym][current_name].append(project)
+
+def generate_representation(representation, application_urls, fernanda_projects, project, is_feign=False):
+  for application in application_urls:
+    for fernanda_acronym in fernanda_projects.keys():
+      projects_name_list = [name['project_name'] for name in fernanda_projects[fernanda_acronym]]
+
+      if is_feign:
+        append_feign_to_representation(representation, fernanda_acronym, projects_name_list, application, project)
+      else:
+        append_application_files_to_representation(representation, fernanda_acronym, projects_name_list, application, project)
 
 def main():
   fernanda_projects = load_file('files/fernanda_projects_dictionary.json')
@@ -71,12 +96,14 @@ def main():
       application_hml_urls = get_application_urls(projects[acronym][project], 'application-hml.properties')
       application_prd_urls = get_application_urls(projects[acronym][project], 'application-prd.properties')
       application_urls = get_application_urls(projects[acronym][project], 'application.properties')
-      feign_urls = set()
 
       integrations = get_integrations(projects[acronym][project])
 
       if integrations is not None:
         feign_urls = get_feign_urls(projects[acronym][project])
+
+        if feign_urls:
+          generate_representation(representation, feign_urls, fernanda_projects, project, True)
 
       accessed_applications = set()
 
@@ -92,9 +119,6 @@ def main():
       if application_urls:
         accessed_applications.update(application_urls)
 
-      if feign_urls:
-        generate_representation(representation, feign_urls, fernanda_projects, project, True)
-
       generate_representation(representation, accessed_applications, fernanda_projects, project, False)
 
   for acronym in representation.keys():
@@ -102,26 +126,6 @@ def main():
       representation[acronym][project] = list(set(representation[acronym][project]))
 
   save_acronym_dictionary(representation, 'representation')
-
-def generate_representation(representation, application_urls, fernanda_projects, project, is_feign=False):
-  for application in application_urls:
-    for fernanda_acronym in fernanda_projects.keys():
-      projects_name_list = [name['project_name'] for name in fernanda_projects[fernanda_acronym]]
-
-      for project_name in projects_name_list:
-        if not is_feign:
-          current_name = project_name.replace('.url', '').replace('.', '-')
-
-          if current_name in application:
-            representation = add_entry(representation, fernanda_acronym, current_name)
-            representation[fernanda_acronym][current_name].append(project)
-        else:
-          current_name = project_name.replace('.url', '')
-
-          if current_name in application:
-            current_name = project_name.replace('.url', '').replace('.', '-')
-            representation = add_entry(representation, fernanda_acronym, current_name)
-            representation[fernanda_acronym][current_name].append(project)
 
 if __name__ == '__main__':
   main()

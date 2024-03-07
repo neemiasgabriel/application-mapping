@@ -5,7 +5,7 @@ import base64
 import gitlab
 import requests
 from dotenv import load_dotenv
-from projects_resources import fernanda_project_acronym, other_projects_acronym, relevant_files
+from resources import fernanda_acronyns, other_projects_acronym
 
 load_dotenv()
 
@@ -80,7 +80,7 @@ def search_project_files(acronym_list):
 
 
 def main():
-    csv_matrix, dictionary = search_project_files(fernanda_project_acronym)
+    csv_matrix, dictionary = search_project_files(fernanda_acronyns)
     # generate_csv('others_fwms_variables', csv_matrix)
     with open('../files/fwms_dictionary.json', 'w+') as f:
         try:
