@@ -97,17 +97,6 @@ def main():
 
       generate_representation(representation, accessed_applications, fernanda_projects, project, False)
 
-      # for application in accessed_applications:
-      #   for fernanda_acronym in fernanda_projects.keys():
-      #     projects_name_list = [name['project_name'] for name in fernanda_projects[fernanda_acronym]]
-      #
-      #     for project_name in projects_name_list:
-      #       current_name = project_name.replace('.url', '').replace('.', '-')
-      #
-      #       if current_name in application:
-      #         representation = add_entry(representation, fernanda_acronym, current_name)
-      #         representation[fernanda_acronym][current_name].append(project)
-
   for acronym in representation.keys():
     for project in representation[acronym].keys():
       representation[acronym][project] = list(set(representation[acronym][project]))
@@ -133,8 +122,6 @@ def generate_representation(representation, application_urls, fernanda_projects,
             current_name = project_name.replace('.url', '').replace('.', '-')
             representation = add_entry(representation, fernanda_acronym, current_name)
             representation[fernanda_acronym][current_name].append(project)
-
-
 
 if __name__ == '__main__':
   main()
