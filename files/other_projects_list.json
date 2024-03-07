@@ -1,0 +1,3591 @@
+{
+  "cbic": {},
+  "conv": {
+    "mcsv-converter-informacoes-cliente-java": {
+      "feign": [
+        {
+          "file": "CustomerDataConsumerFeign.java",
+          "url": "cdps.consultar.informacoes.cliente.java.url"
+        },
+        {
+          "file": "CustomerOperationsConsumerFeign.java",
+          "url": "cdps.operacoes.clientes.java.url"
+        },
+        {
+          "file": "SublimitsCustomerConsumerFeign.java",
+          "url": "glpf.consulta.limites.java.url"
+        }
+      ],
+      "bootstrap": "mcsv-integration; ctcr-integration; cdps-integration; glpf-integration",
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "original.url.rest.document",
+            "url_text": "vshmsctnprodutos:8101/cmmo-gedc"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "original.url.rest.document",
+            "url_text": "vshmsctnprodutos:8101/cmmo-gedc"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "original.url.rest.document",
+            "url_text": "vsmsctnprodutos:8101/cmmo-gedc"
+          }
+        ]
+      }
+    },
+    "mcsv-convenio-guarda-chuva-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "url.cdps.customer.path",
+            "url_text": "cdps-consultar-informacoes-cliente-java.apps.ocp-d.original.com.br/v1"
+          },
+          {
+            "variable_name": "url.gagc.product-endpoint",
+            "url_text": "bcodmswrkctn01:8589/gagc-garantias-imoveis-java/v1/products"
+          },
+          {
+            "variable_name": "url.gagc.subproduct-endpoint",
+            "url_text": "bcodmswrkctn01:8589/gagc-garantias-imoveis-java/v1/subproducts/"
+          },
+          {
+            "variable_name": "url.ctas.status-endpoint",
+            "url_text": "bcodmswrkctn01:8642/ctas-validacoes-java/v1/accounts/"
+          },
+          {
+            "variable_name": "url.gagc.goods.endpoint",
+            "url_text": "bcodmswrkctn01:8589/gagc-garantias-imoveis-java/v1/properties/warranties"
+          },
+          {
+            "variable_name": "url.gagc.agreement.search",
+            "url_text": "bcodmswrkctn01:8590/gagc-convenio-guarda-chuva-java/v1/agreements"
+          },
+          {
+            "variable_name": "url.gagc.agreement.byid",
+            "url_text": "bcodmswrkctn01:8590/gagc-convenio-guarda-chuva-java/v1/agreements/"
+          },
+          {
+            "variable_name": "url.gagc.agreement.status",
+            "url_text": "bcodmswrkctn01:8590/gagc-convenio-guarda-chuva-java/v1/agreements/"
+          },
+          {
+            "variable_name": "url.gagc.agreementOperation",
+            "url_text": "bcodmswrkctn01:8590/gagc-convenio-guarda-chuva-java/v1/agreementsOperations/ "
+          },
+          {
+            "variable_name": "url.gagc.convenioguardachuva.inserirdadosconvenio.path",
+            "url_text": "bcodmswrkctn01:8590/gagc-convenio-guarda-chuva-java/v1"
+          },
+          {
+            "variable_name": "url.ged.pesquisar.obterdocumento",
+            "url_text": "gedc-consultas-java.apps.ocp-d.original.com.br/v1/"
+          },
+          {
+            "variable_name": "url.ged.inserir.documento",
+            "url_text": "gedc-inclusao-manutencao-java.apps.ocp-d.original.com.br/v1/"
+          },
+          {
+            "variable_name": "url.gagc.vincular.emprestimo.orq",
+            "url_text": "bcodmswrkctn01:8706/gagc-orq-vinculacao-convenio-guarda-chuva-java/v1"
+          },
+          {
+            "variable_name": "url.get.minutaria",
+            "url_text": "bcodmswrkctn01:8590/gagc-convenio-guarda-chuva-java/v1/"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "url.cdps.customer.path",
+            "url_text": "cdps-consultar-informacoes-cliente-java.apps.ocp-h.original.com.br/v1"
+          },
+          {
+            "variable_name": "url.gagc.product-endpoint",
+            "url_text": "bcohmswrkctn01:8589/gagc-garantias-imoveis-java/v1/products"
+          },
+          {
+            "variable_name": "url.gagc.subproduct-endpoint",
+            "url_text": "bcohmswrkctn01:8589/gagc-garantias-imoveis-java/v1/subproducts/"
+          },
+          {
+            "variable_name": "url.ctas.status-endpoint",
+            "url_text": "bcohmswrkctn01:8642/ctas-validacoes-java/v1/accounts/"
+          },
+          {
+            "variable_name": "url.gagc.goods.endpoint",
+            "url_text": "bcohmswrkctn01:8589/gagc-garantias-imoveis-java/v1/properties/warranties"
+          },
+          {
+            "variable_name": "url.gagc.agreement.search",
+            "url_text": "bcohmswrkctn01:8590/gagc-convenio-guarda-chuva-java/v1/agreements"
+          },
+          {
+            "variable_name": "url.gagc.agreement.byid",
+            "url_text": "bcohmswrkctn01:8590/gagc-convenio-guarda-chuva-java/v1/agreements/"
+          },
+          {
+            "variable_name": "url.gagc.agreement.status",
+            "url_text": "bcohmswrkctn01:8590/gagc-convenio-guarda-chuva-java/v1/agreements/"
+          },
+          {
+            "variable_name": "url.gagc.agreementOperation",
+            "url_text": "bcohmswrkctn01:8590/gagc-convenio-guarda-chuva-java/v1/agreementsOperations/"
+          },
+          {
+            "variable_name": "url.gagc.convenioguardachuva.inserirdadosconvenio.path",
+            "url_text": "bcohmswrkctn01:8590/gagc-convenio-guarda-chuva-java/v1"
+          },
+          {
+            "variable_name": "url.ged.pesquisar.obterdocumento",
+            "url_text": "gedc-consultas-java.apps.ocp-h.original.com.br/v1/"
+          },
+          {
+            "variable_name": "url.ged.inserir.documento",
+            "url_text": "gedc-inclusao-manutencao-java.apps.ocp-h.original.com.br/v1/"
+          },
+          {
+            "variable_name": "url.gagc.vincular.emprestimo.orq",
+            "url_text": "bcohmswrkctn01:8706/gagc-orq-vinculacao-convenio-guarda-chuva-java/v1"
+          },
+          {
+            "variable_name": "url.get.minutaria",
+            "url_text": "bcohmswrkctn01:8590/gagc-convenio-guarda-chuva-java/v1/"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "url.cdps.customer.path",
+            "url_text": "cdps-consultar-informacoes-cliente-java.original.com.br/v1"
+          },
+          {
+            "variable_name": "url.gagc.product-endpoint",
+            "url_text": "bcopmswrkctn01:8589/gagc-garantias-imoveis-java/v1/products"
+          },
+          {
+            "variable_name": "url.gagc.subproduct-endpoint",
+            "url_text": "bcopmswrkctn01:8589/gagc-garantias-imoveis-java/v1/subproducts/"
+          },
+          {
+            "variable_name": "url.ctas.status-endpoint",
+            "url_text": "bcopmswrkctn01:8642/ctas-validacoes-java/v1/accounts/"
+          },
+          {
+            "variable_name": "url.gagc.goods.endpoint",
+            "url_text": "bcopmswrkctn01:8589/gagc-garantias-imoveis-java/v1/properties/warranties"
+          },
+          {
+            "variable_name": "url.gagc.agreement.search",
+            "url_text": "bcopmswrkctn01:8590/gagc-convenio-guarda-chuva-java/v1/agreements"
+          },
+          {
+            "variable_name": "url.gagc.agreement.byid",
+            "url_text": "bcopmswrkctn01:8590/gagc-convenio-guarda-chuva-java/v1/agreements/"
+          },
+          {
+            "variable_name": "url.gagc.agreement.status",
+            "url_text": "bcopmswrkctn01:8590/gagc-convenio-guarda-chuva-java/v1/agreements/"
+          },
+          {
+            "variable_name": "url.gagc.agreementOperation",
+            "url_text": "bcopmswrkctn01:8590/gagc-convenio-guarda-chuva-java/v1/agreementsOperations/"
+          },
+          {
+            "variable_name": "url.gagc.convenioguardachuva.inserirdadosconvenio.path",
+            "url_text": "bcopmswrkctn01:8590/gagc-convenio-guarda-chuva-java/v1"
+          },
+          {
+            "variable_name": "url.ged.pesquisar.obterdocumento",
+            "url_text": "gedc-consultas-java.original.com.br/v1/"
+          },
+          {
+            "variable_name": "url.ged.inserir.documento",
+            "url_text": "gedc-inclusao-manutencao-java.original.com.br/v1/"
+          },
+          {
+            "variable_name": "url.gagc.vincular.emprestimo.orq",
+            "url_text": "bcopmswrkctn01:8706/gagc-orq-vinculacao-convenio-guarda-chuva-java/v1"
+          },
+          {
+            "variable_name": "url.get.minutaria",
+            "url_text": "bcopmswrkctn01:8590/gagc-convenio-guarda-chuva-java/v1/"
+          }
+        ]
+      }
+    },
+    "conv-conciliacao-detran-sp-batch-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "daycoval.url.base",
+            "url_text": "187.9.76.122:8901/Pagamento/ConsultarPagamento"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "daycoval.url.base",
+            "url_text": "187.9.76.122:8901/Pagamento/ConsultarPagamento"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "daycoval.url.base",
+            "url_text": "192.168.33.5:8090/Pagamento/ConsultarPagamento"
+          }
+        ]
+      }
+    },
+    "conv-liquidacoes-detran-java": {
+      "bootstrap": "original-legacy; conv-corp; conv-integration",
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "daycoval.url.base",
+            "url_text": "187.9.76.122:8901"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "daycoval.url.base",
+            "url_text": "187.9.76.122:8901"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "daycoval.url.base",
+            "url_text": "192.168.33.5:8090"
+          }
+        ]
+      }
+    }
+  },
+  "depb": {},
+  "pgto": {
+    "pgto-ordem-pagamento-pix-java": {
+      "feign": [
+        {
+          "file": "AutbankInstantPaymentAdressingFeign.java",
+          "url": "autbank.instant.payment.addressing"
+        },
+        {
+          "file": "AutbankInstantPaymentFeign.java",
+          "url": "autbank.instant.payment"
+        }
+      ],
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "swagger.host",
+            "url_text": "${project.artifactId}.apps.ocp-d.original.com.br"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "swagger.host",
+            "url_text": "${project.artifactId}.apps.ocp-h.original.com.br"
+          },
+          {
+            "variable_name": "autbank.instant.payment",
+            "url_text": "kong.original.internal.qa/autbank-api-pagamento-instantaneo"
+          },
+          {
+            "variable_name": "autbank.instant.payment.addressing",
+            "url_text": "kong.original.internal.qa/autbank-api-pagamento-instantaneo-enderecamento"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "swagger.host",
+            "url_text": "${project.artifactId}.original.com.br"
+          },
+          {
+            "variable_name": "autbank.instant.payment",
+            "url_text": "kong.original.internal.prd/autbank-api-pagamento-instantaneo"
+          },
+          {
+            "variable_name": "autbank.instant.payment.addressing",
+            "url_text": "kong.original.internal.prd/autbank-api-pagamento-instantaneo-enderecamento"
+          }
+        ]
+      }
+    },
+    "pgto-acmp-615-boletos-batch-java": {},
+    "pgto-concilia-cancela-baixa-pagfor-batch-java": {},
+    "pgto-consumidor-estorno-baixa-titulos-java": {},
+    "pgto-cancela-baixa-titulos-pagfor-java": {
+      "feign": [
+        {
+          "file": "CtasFeignClient.java",
+          "url": "ctas.efetivar.credito.java.url"
+        }
+      ],
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "swagger.host",
+            "url_text": "${project.artifactId}.apps.ocp-d.original.com.br"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "swagger.host",
+            "url_text": "${project.artifactId}.apps.ocp-h.original.com.br"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "swagger.host",
+            "url_text": "${project.artifactId}.original.com.br"
+          }
+        ]
+      }
+    },
+    "pgto-retorno-baixa-batch-java": {},
+    "pgto-estornar-baixa-titulos-java": {},
+    "pgto-consulta-titulos-java": {
+      "application": {
+        "application.properties": [
+          {
+            "variable_name": "swagger.host",
+            "url_text": "${spring.application.name}.original.com.br"
+          }
+        ]
+      }
+    },
+    "pgto-captura-resposta-baixa-titulos-java": {},
+    "pgto-consumidor-status-baixa-titulos-java": {},
+    "pgto-solicita-baixa-titulos-java": {
+      "application": {
+        "application.properties": [
+          {
+            "variable_name": "original.gr.endpoint",
+            "url_text": "vssgrddawshom.bcocorporate.ad/sgr.net/ws/GR_BORServicesNC.asmx"
+          },
+          {
+            "variable_name": "original.gr.namespace",
+            "url_text": "tempuri.org/"
+          },
+          {
+            "variable_name": "swagger.host",
+            "url_text": "${spring.application.name}.original.com.br"
+          }
+        ]
+      }
+    },
+    "pgto-canal-comprovante-java": {},
+    "pgto-cancela-agendamento-cartao-batch-java": {
+      "bootstrap": "pgto-corp; original-legacy"
+    },
+    "pgto-transferencia-pix-java": {
+      "bootstrap": "pgto-corp; intp-integration",
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "endpoint.aspa.service",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com:2049/aspa-configuracao-psti-java/v1/parameter/filter"
+          },
+          {
+            "variable_name": "endpoint.aspa-manutencao-participantes-java.host",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com"
+          },
+          {
+            "variable_name": "url.cdps-consultar-informacoes-cliente-java.customers",
+            "url_text": "cdps-consultar-informacoes-cliente-pix-java.cdps-dev.svc.cluster.local:8080/v1/customers/list/searches"
+          },
+          {
+            "variable_name": "cmmo.ceno.uri",
+            "url_text": "ceno-servicos-cmm-java.ceno-dev.svc.cluster.local:8080/v1/processNotification"
+          },
+          {
+            "variable_name": "endpoint.ctas-efetivar-debito-java.host",
+            "url_text": "ctas-efetivar-debito-java.ctas-dev.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.ctas-efetivar-credito-java.host",
+            "url_text": "ctas-efetivar-credito-java.ctas-dev.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.intp-produtor-pix-recebido-java",
+            "url_text": "intp-produtor-pix-recebido-java.intp-dev.svc.cluster.local:8080/v1/conciliations"
+          },
+          {
+            "variable_name": "endpoint.intp-comprovantes-pagamentos-java.host",
+            "url_text": "intp-comprovantes-pagamentos-java.intp-dev.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.aws.intp.protocols.java.request",
+            "url_text": "NLB-development-04490c85841a1e74.elb.sa-east-1.amazonaws.com:2021/intp-protocols-java/v1/protocols-requests"
+          },
+          {
+            "variable_name": "endpoint.ipix-orquestrador-envia-spi-java",
+            "url_text": "ipix-orquestrador-envia-spi-java.ipix-dev.svc.cluster.local:8080/v1/transfers"
+          },
+          {
+            "variable_name": "endpoint.ipix-conciliacao-pix-java-conciliations",
+            "url_text": "ipix-conciliacao-pix-java.ipix-dev.svc.cluster.local:8080/v1/conciliations"
+          },
+          {
+            "variable_name": "endpoint.transaction-limit",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com:2009/ipix-limite-transacoes-java/v1/transactions/check-limits"
+          },
+          {
+            "variable_name": "endpoint.ipix-controle-consultas-chaves-java.remove-token-bucket",
+            "url_text": "ipix-controle-consultas-chaves-java.ipix-dev.svc.cluster.local:8080/v1/buckets/remove"
+          },
+          {
+            "variable_name": "endpoint.ocp.ipix-transferencias-bacen-transfer",
+            "url_text": "ipix-transferencias-bacen-java.ipix-dev.svc.cluster.local:8080/v1/transfers"
+          },
+          {
+            "variable_name": "endpoint.aws.ipix-transferencias-bacen-transfer",
+            "url_text": "NLB-development-04490c85841a1e74.elb.sa-east-1.amazonaws.com:2015/intp-transferencias-bacen-java/v1/transfers"
+          },
+          {
+            "variable_name": "endpoint.lipe-transacoes-java.host",
+            "url_text": "lipe-transacoes-java.lipe-dev.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-status-pagamentos-java.host",
+            "url_text": "pgto-status-pagamentos-java.pgto-dev.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-agendamentos-pix-java-consult-end2end",
+            "url_text": "pgto-agendamentos-pix-java.pgto-dev.svc.cluster.local:8080/v1/receipt/schedules/{end2End}/receipts/end2end"
+          },
+          {
+            "variable_name": "endpoint.pgto-comprovantes-pagamentos-java.host",
+            "url_text": "pgto-comprovantes-pagamentos-java.pgto-dev.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-prepara-comprovante-java.host",
+            "url_text": "pgto-prepara-comprovante-java.pgto-dev.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-prepara-comprovante-java-consult-end2end.host",
+            "url_text": "pgto-prepara-comprovante-java.pgto-dev.svc.cluster.local:8080/v1/prepare/schedule/{transactionId}"
+          },
+          {
+            "variable_name": "endpoint.pgto-comprovante-ted-java.host",
+            "url_text": "pgto-comprovante-ted-java.pgto-dev.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto.host",
+            "url_text": "bcohmswrkctn01.bcocorporate.ad"
+          },
+          {
+            "variable_name": "endpoint.pgto-chargeback-java.host",
+            "url_text": "pgto-transferencias-bacen-java.pgto-dev.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-transferencias-java.transfers-schedule.host",
+            "url_text": "pgto-transferencias-java.pgto-dev.svc.cluster.local:8080/v1/transfers/schedules"
+          },
+          {
+            "variable_name": "endpoint.pgto-transferencias-java.transfers-v2.host",
+            "url_text": "pgto-transferencias-java.pgto-dev.svc.cluster.local:8080/v2/transfers"
+          },
+          {
+            "variable_name": "endpoint.pgto-transferencias-java.transfers-saque-troco-v2.host",
+            "url_text": "pgto-transferencias-java.pgto-dev.svc.cluster.local:8080/v2/transfers/toreceive"
+          },
+          {
+            "variable_name": "endpoint.pgto-favorecidos-java.host",
+            "url_text": "pgto-favorecidos-pagamentos-java.pgto-dev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "endpoint.ipix-manutencao-conciliacao-pix-java.host",
+            "url_text": "ipix-manutencao-conciliacao-pix-java.ipix-dev.svc.cluster.local"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "endpoint.aspa.service",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com:2049/aspa-configuracao-psti-java/v1/parameter/filter"
+          },
+          {
+            "variable_name": "endpoint.aspa-manutencao-participantes-java.host",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com"
+          },
+          {
+            "variable_name": "url.cdps-consultar-informacoes-cliente-java.customers",
+            "url_text": "cdps-consultar-informacoes-cliente-pix-java.cdps-hml.svc.cluster.local:8080/v1/customers/list/searches"
+          },
+          {
+            "variable_name": "cmmo.ceno.uri",
+            "url_text": "ceno-servicos-cmm-java.ceno-hml.svc.cluster.local:8080/v1/processNotification"
+          },
+          {
+            "variable_name": "endpoint.ctas-efetivar-debito-java.host",
+            "url_text": "ctas-efetivar-debito-java.ctas-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.ctas-efetivar-credito-java.host",
+            "url_text": "ctas-efetivar-credito-java.ctas-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.intp-produtor-pix-recebido-java",
+            "url_text": "intp-produtor-pix-recebido-java.intp-hml.svc.cluster.local:8080/v1/conciliations"
+          },
+          {
+            "variable_name": "endpoint.intp-comprovantes-pagamentos-java.host",
+            "url_text": "intp-comprovantes-pagamentos-java.intp-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.aws.intp.protocols.java.request",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com:2021/intp-protocols-java/v1/protocols-requests"
+          },
+          {
+            "variable_name": "endpoint.ipix-orquestrador-envia-spi-java",
+            "url_text": "ipix-orquestrador-envia-spi-java.ipix-hml.svc.cluster.local:8080/v1/transfers"
+          },
+          {
+            "variable_name": "endpoint.ipix-conciliacao-pix-java-conciliations",
+            "url_text": "ipix-conciliacao-pix-java.ipix-hml.svc.cluster.local:8080/v1/conciliations"
+          },
+          {
+            "variable_name": "endpoint.transaction-limit",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com:2009/ipix-limite-transacoes-java/v1/transactions/check-limits"
+          },
+          {
+            "variable_name": "endpoint.ipix-controle-consultas-chaves-java.remove-token-bucket",
+            "url_text": "ipix-controle-consultas-chaves-java.ipix-hml.svc.cluster.local:8080/v1/buckets/remove"
+          },
+          {
+            "variable_name": "endpoint.ocp.ipix-transferencias-bacen-transfer",
+            "url_text": "ipix-transferencias-bacen-java.ipix-hml.svc.cluster.local:8080/v1/transfers"
+          },
+          {
+            "variable_name": "endpoint.aws.ipix-transferencias-bacen-transfer",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com:2015/intp-transferencias-bacen-java/v1/transfers"
+          },
+          {
+            "variable_name": "endpoint.lipe-transacoes-java.host",
+            "url_text": "lipe-transacoes-java.lipe-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-status-pagamentos-java.host",
+            "url_text": "pgto-status-pagamentos-java.pgto-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-agendamentos-pix-java-consult-end2end",
+            "url_text": "pgto-agendamentos-pix-java.pgto-hml.svc.cluster.local:8080/v1/receipt/schedules/{end2End}/receipts/end2end"
+          },
+          {
+            "variable_name": "endpoint.pgto-comprovantes-pagamentos-java.host",
+            "url_text": "pgto-comprovantes-pagamentos-java.pgto-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-prepara-comprovante-java.host",
+            "url_text": "pgto-prepara-comprovante-java.pgto-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-prepara-comprovante-java-consult-end2end.host",
+            "url_text": "pgto-prepara-comprovante-java.pgto-hml.svc.cluster.local:8080/v1/prepare/schedule/{transactionId}"
+          },
+          {
+            "variable_name": "endpoint.pgto-comprovante-ted-java.host",
+            "url_text": "pgto-comprovante-ted-java.pgto-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto.host",
+            "url_text": "bcohmswrkctn01.bcocorporate.ad"
+          },
+          {
+            "variable_name": "endpoint.pgto-chargeback-java.host",
+            "url_text": "pgto-transferencias-bacen-java.pgto-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-transferencias-java.transfers-schedule.host",
+            "url_text": "pgto-transferencias-java.pgto-hml.svc.cluster.local:8080/v1/transfers/schedules"
+          },
+          {
+            "variable_name": "endpoint.pgto-transferencias-java.transfers-v2.host",
+            "url_text": "pgto-transferencias-java.pgto-hml.svc.cluster.local:8080/v2/transfers"
+          },
+          {
+            "variable_name": "endpoint.pgto-transferencias-java.transfers-saque-troco-v2.host",
+            "url_text": "pgto-transferencias-java.pgto-hml.svc.cluster.local:8080/v2/transfers/toreceive"
+          },
+          {
+            "variable_name": "endpoint.pgto-favorecidos-java.host",
+            "url_text": "pgto-favorecidos-pagamentos-java.pgto-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "endpoint.ipix-manutencao-conciliacao-pix-java.host",
+            "url_text": "ipix-manutencao-conciliacao-pix-java.ipix-hml.svc.cluster.local"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "endpoint.aspa.service",
+            "url_text": "NLB-production-d2f4ae9c4ba4e07b.elb.sa-east-1.amazonaws.com:2049/aspa-configuracao-psti-java/v1/parameter/filter"
+          },
+          {
+            "variable_name": "endpoint.aspa-manutencao-participantes-java.host",
+            "url_text": "NLB-production-d2f4ae9c4ba4e07b.elb.sa-east-1.amazonaws.com"
+          },
+          {
+            "variable_name": "url.cdps-consultar-informacoes-cliente-java.customers",
+            "url_text": "cdps-consultar-informacoes-cliente-pix-java.cdps.svc.cluster.local:8080/v1/customers/list/searches"
+          },
+          {
+            "variable_name": "cmmo.ceno.uri",
+            "url_text": "ceno-servicos-cmm-java.ceno.svc.cluster.local:8080/v1/processNotification"
+          },
+          {
+            "variable_name": "endpoint.ctas-efetivar-debito-java.host",
+            "url_text": "ctas-efetivar-debito-java.ctas.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.ctas-efetivar-credito-java.host",
+            "url_text": "ctas-efetivar-credito-java.ctas.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.intp-produtor-pix-recebido-java",
+            "url_text": "intp-produtor-pix-recebido-java.intp.svc.cluster.local:8080/v1/conciliations"
+          },
+          {
+            "variable_name": "endpoint.intp-comprovantes-pagamentos-java.host",
+            "url_text": "intp-comprovantes-pagamentos-java.intp.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.aws.intp.protocols.java.request",
+            "url_text": "NLB-production-d2f4ae9c4ba4e07b.elb.sa-east-1.amazonaws.com:2021/intp-protocols-java/v1/protocols-requests"
+          },
+          {
+            "variable_name": "endpoint.ipix-orquestrador-envia-spi-java",
+            "url_text": "ipix-orquestrador-envia-spi-java.ipix.svc.cluster.local:8080/v1/transfers"
+          },
+          {
+            "variable_name": "endpoint.ipix-conciliacao-pix-java-conciliations",
+            "url_text": "ipix-conciliacao-pix-java.ipix.svc.cluster.local:8080/v1/conciliations"
+          },
+          {
+            "variable_name": "endpoint.transaction-limit",
+            "url_text": "NLB-production-d2f4ae9c4ba4e07b.elb.sa-east-1.amazonaws.com:2009/ipix-limite-transacoes-java/v1/transactions/check-limits"
+          },
+          {
+            "variable_name": "endpoint.ipix-controle-consultas-chaves-java.remove-token-bucket",
+            "url_text": "ipix-controle-consultas-chaves-java.ipix.svc.cluster.local:8080/v1/buckets/remove"
+          },
+          {
+            "variable_name": "endpoint.ocp.ipix-transferencias-bacen-transfer",
+            "url_text": "ipix-transferencias-bacen-java.ipix.svc.cluster.local:8080/v1/transfers"
+          },
+          {
+            "variable_name": "endpoint.aws.ipix-transferencias-bacen-transfer",
+            "url_text": "NLB-production-d2f4ae9c4ba4e07b.elb.sa-east-1.amazonaws.com:2015/intp-transferencias-bacen-java/v1/transfers"
+          },
+          {
+            "variable_name": "endpoint.lipe-transacoes-java.host",
+            "url_text": "lipe-transacoes-java.lipe.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-status-pagamentos-java.host",
+            "url_text": "pgto-status-pagamentos-java.pgto.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-agendamentos-pix-java-consult-end2end",
+            "url_text": "pgto-agendamentos-pix-java.pgto.svc.cluster.local:8080/v1/receipt/schedules/{end2End}/receipts/end2end"
+          },
+          {
+            "variable_name": "endpoint.pgto-comprovantes-pagamentos-java.host",
+            "url_text": "pgto-comprovantes-pagamentos-java.pgto.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-prepara-comprovante-java.host",
+            "url_text": "pgto-prepara-comprovante-java.pgto.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-prepara-comprovante-java-consult-end2end.host",
+            "url_text": "pgto-prepara-comprovante-java.pgto.svc.cluster.local:8080/v1/prepare/schedule/{transactionId}"
+          },
+          {
+            "variable_name": "endpoint.pgto-comprovante-ted-java.host",
+            "url_text": "pgto-comprovante-ted-java.pgto.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto.host",
+            "url_text": "vsmsctnprodutos.bcocorporate.ad"
+          },
+          {
+            "variable_name": "endpoint.pgto-chargeback-java.host",
+            "url_text": "pgto-transferencias-bacen-java.pgto.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-transferencias-java.transfers-schedule.host",
+            "url_text": "pgto-transferencias-java.pgto.svc.cluster.local:8080/v1/transfers/schedules"
+          },
+          {
+            "variable_name": "endpoint.pgto-transferencias-java.transfers-v2.host",
+            "url_text": "pgto-transferencias-java.pgto.svc.cluster.local:8080/v2/transfers"
+          },
+          {
+            "variable_name": "endpoint.pgto-transferencias-java.transfers-saque-troco-v2.host",
+            "url_text": "pgto-transferencias-java.pgto.svc.cluster.local:8080/v2/transfers/toreceive"
+          },
+          {
+            "variable_name": "endpoint.pgto-favorecidos-java.host",
+            "url_text": "pgto-favorecidos-pagamentos-java.pgto.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "endpoint.ipix-manutencao-conciliacao-pix-java.host",
+            "url_text": "ipix-manutencao-conciliacao-pix-java.ipix.svc.cluster.local"
+          }
+        ]
+      }
+    },
+    "pgto-favorecidos-pagamentos-java": {
+      "bootstrap": "pgto-corp; original-legacy",
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "url.lipe.manutencao.limites",
+            "url_text": "lipe-manutencao-limites-java.lipe-dev.svc.cluster.local:8080"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "url.lipe.manutencao.limites",
+            "url_text": "lipe-manutencao-limites-java.apps.ocp-h.original.com.br"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "url.lipe.manutencao.limites",
+            "url_text": "lipe-manutencao-limites-java.lipe.svc.cluster.local:8080"
+          }
+        ]
+      }
+    },
+    "pgto-consumidor-baixa-boleto-vr-java": {
+      "bootstrap": "pgto-corp;original-legacy;intp-integration;pgto-integration;atco-integration",
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "pgto.callback.ted.java.external.url",
+            "url_text": "pgto-callback-ted-java.apps.ocp-d.original.com.br"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "pgto.callback.ted.java.external.url",
+            "url_text": "pgto-callback-ted-java.apps.ocp-h.original.com.br"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "pgto.callback.ted.java.external.url",
+            "url_text": "pgto-callback-ted-java.original.com.br"
+          }
+        ]
+      }
+    },
+    "pgto-conciliacao-estorno-boleto-batch-java": {},
+    "pgto-produtor-baixa-boleto-vr-java": {
+      "bootstrap": "pgto-corp"
+    },
+    "pgto-produtor-baixa-boleto-compe-java": {
+      "bootstrap": "pgto-corp"
+    },
+    "pgto-consumidor-estorno-boleto-java": {
+      "bootstrap": "pgto-corp; ctas-integration; original-legacy; atco-integration"
+    },
+    "pgto-estorno-boleto-batch-java": {},
+    "pgto-processamento-arquivo-remessa-batch-java": {},
+    "pgto-qr-code-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "endpoint.ipix-leit-qr-code.host",
+            "url_text": "NLB-development-04490c85841a1e74.elb.sa-east-1.amazonaws.com"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "endpoint.ipix-leit-qr-code.host",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "endpoint.ipix-leit-qr-code.host",
+            "url_text": "NLB-production-d2f4ae9c4ba4e07b.elb.sa-east-1.amazonaws.com"
+          }
+        ]
+      }
+    },
+    "pgto-canal-comprovante-parceiro-java": {},
+    "pgto-monitorar-pagamentos-batch-java": {
+      "bootstrap": "pgto-corp; original-legacy; atco-integration; opbk-integration; pgto-integration"
+    },
+    "pgto-pag-original-java": {
+      "bootstrap": "pgto-corp; original-legacy"
+    },
+    "pgto-consumidor-iniciador-pagamentos-java": {
+      "bootstrap": "pgto-corp; pgto-integration; original-legacy; intp-integration; atco-integration; cdps-integration; pgto-integration; opbk-integration"
+    },
+    "pgto-iniciador-pagamentos-java": {
+      "bootstrap": "pgto-corp; pgto-integration; original-legacy; atco-integration; ctas-integration; fwms-integration; fwcl-corp"
+    },
+    "pgto-codigo-barras-boleto-java": {
+      "bootstrap": "original-legacy;pgto-corp;pgto-integration;tbgr-integration"
+    },
+    "pgto-consumidor-pix-recebido-java": {
+      "bootstrap": "pgto-corp; intp-corp; original-legacy",
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "original.url.rest.pgto.agendamentos",
+            "url_text": "pgto-agendamentos-pix-java.pgto-dev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "original.url.rest.ceno",
+            "url_text": "ceno-servicos-cmm-java.ceno-dev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "ad.host",
+            "url_text": "atco-auth-sistemas-java.atco-hml.svc.cluster.local:8080"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "original.url.rest.pgto.agendamentos",
+            "url_text": "pgto-agendamentos-pix-java.pgto-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "original.url.rest.ceno",
+            "url_text": "ceno-servicos-cmm-java.ceno-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "ad.host",
+            "url_text": "atco-auth-sistemas-java.atco-hml.svc.cluster.local:8080"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "original.url.rest.pgto.agendamentos",
+            "url_text": "pgto-agendamentos-pix-java.pgto.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "original.url.rest.ceno",
+            "url_text": "ceno-servicos-cmm-java.ceno.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "ad.host",
+            "url_text": "atco-auth-sistemas-java.atco.svc.cluster.local:8080"
+          }
+        ]
+      }
+    },
+    "pgto-agendamentos-pix-java": {
+      "bootstrap": "pgto-corp; original-legacy",
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "original.url.rest.ceno",
+            "url_text": "ceno-servicos-cmm-java.ceno-hml.svc.cluster.local:8080/v1/processNotification"
+          },
+          {
+            "variable_name": "endpoint.pgto-agendamentos-pix-java-add-receipt",
+            "url_text": "pgto-agendamentos-pix-java.pgto-dev.svc.cluster.local:8080/v1/receipt/schedules/receipts"
+          },
+          {
+            "variable_name": "endpoint.pgto-transferencias-java-qrcode-validation",
+            "url_text": "pgto-transferencias-bacen-java.pgto-dev.svc.cluster.local:8080/v1/qr-codes/validations"
+          },
+          {
+            "variable_name": "endpoint.pgto-prepara-comprovante-java-prepare",
+            "url_text": "pgto-prepara-comprovante-java.pgto-dev.svc.cluster.local:8080/v1/prepare"
+          },
+          {
+            "variable_name": "endpoint.pgto-comprovante-ted-java-credit-transferences-receipts",
+            "url_text": "pgto-comprovante-ted-java.pgto-dev.svc.cluster.local:8080/v1/credit-transferences/receipts"
+          },
+          {
+            "variable_name": "endpoint.fwms.nsu-generate",
+            "url_text": "fwms-nsu-java.fwms-dev.svc.cluster.local:8080/v1/nsu"
+          },
+          {
+            "variable_name": "endpoint.intp-buscar-chave",
+            "url_text": "intp-orquestrador-dict-java.intp-dev.svc.cluster.local:8080/v1/customers/{documentNumber}/access-keys/search/{key}"
+          },
+          {
+            "variable_name": "ad.host",
+            "url_text": "atco-auth-sistemas-java.atco-dev.svc.cluster.local:8080"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "original.url.rest.ceno",
+            "url_text": "ceno-servicos-cmm-java.ceno-hml.svc.cluster.local:8080/v1/processNotification"
+          },
+          {
+            "variable_name": "endpoint.pgto-agendamentos-pix-java-add-receipt",
+            "url_text": "pgto-agendamentos-pix-java.pgto-hml.svc.cluster.local:8080/v1/receipt/schedules/receipts"
+          },
+          {
+            "variable_name": "endpoint.pgto-transferencias-java-qrcode-validation",
+            "url_text": "pgto-transferencias-bacen-java.pgto-hml.svc.cluster.local:8080/v1/qr-codes/validations"
+          },
+          {
+            "variable_name": "endpoint.pgto-prepara-comprovante-java-prepare",
+            "url_text": "pgto-prepara-comprovante-java.pgto-hml.svc.cluster.local:8080/v1/prepare"
+          },
+          {
+            "variable_name": "endpoint.pgto-comprovante-ted-java-credit-transferences-receipts",
+            "url_text": "pgto-comprovante-ted-java.pgto-hml.svc.cluster.local:8080/v1/credit-transferences/receipts"
+          },
+          {
+            "variable_name": "endpoint.fwms.nsu-generate",
+            "url_text": "fwms-nsu-java.fwms-hml.svc.cluster.local:8080/v1/nsu"
+          },
+          {
+            "variable_name": "endpoint.intp-buscar-chave",
+            "url_text": "intp-orquestrador-dict-java.intp-hml.svc.cluster.local:8080/v1/customers/{documentNumber}/access-keys/search/{key}"
+          },
+          {
+            "variable_name": "ad.host",
+            "url_text": "atco-auth-sistemas-java.atco-hml.svc.cluster.local:8080"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "original.url.rest.ceno",
+            "url_text": "ceno-servicos-cmm-java.ceno.svc.cluster.local:8080/v1/processNotification"
+          },
+          {
+            "variable_name": "endpoint.pgto-agendamentos-pix-java-add-receipt",
+            "url_text": "pgto-agendamentos-pix-java.pgto.svc.cluster.local:8080/v1/receipt/schedules/receipts"
+          },
+          {
+            "variable_name": "endpoint.pgto-transferencias-java-qrcode-validation",
+            "url_text": "pgto-transferencias-bacen-java.pgto.svc.cluster.local:8080/v1/qr-codes/validations"
+          },
+          {
+            "variable_name": "endpoint.pgto-prepara-comprovante-java-prepare",
+            "url_text": "pgto-prepara-comprovante-java.pgto.svc.cluster.local:8080/v1/prepare"
+          },
+          {
+            "variable_name": "endpoint.pgto-comprovante-ted-java-credit-transferences-receipts",
+            "url_text": "pgto-comprovante-ted-java.pgto.svc.cluster.local:8080/v1/credit-transferences/receipts"
+          },
+          {
+            "variable_name": "endpoint.fwms.nsu-generate",
+            "url_text": "fwms-nsu-java.fwms.svc.cluster.local:8080/v1/nsu"
+          },
+          {
+            "variable_name": "endpoint.intp-buscar-chave",
+            "url_text": "intp-orquestrador-dict-java.intp.svc.cluster.local:8080/v1/customers/{documentNumber}/access-keys/search/{key}"
+          },
+          {
+            "variable_name": "ad.host",
+            "url_text": "atco-auth-sistemas-java.atco.svc.cluster.local:8080"
+          }
+        ]
+      }
+    },
+    "pgto-consumidor-agendamentos-pix-java": {
+      "bootstrap": "pgto-corp; original-legacy",
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "ad.host",
+            "url_text": "atco-auth-sistemas-java.atco-dev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "ms.pgto.qrcode.endpoint",
+            "url_text": "pgto-transferencias-bacen-java.pgto-dev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "ms.pgto.payment.service",
+            "url_text": "pgto-transferencias-bacen-java.pgto-dev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "ms.ctas.balance.service",
+            "url_text": "ctas-saldo-java.ctas-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "ms.intp.produtor.pix.recebido.uri",
+            "url_text": "intp-produtor-pix-recebido-java.intp-dev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "ms.lipe.pix.service",
+            "url_text": "lipe-transacoes-java.lipe-dev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "ms.pgto.agendamento.pix.service",
+            "url_text": "pgto-agendamentos-pix-java.pgto-dev.svc.cluster.local:8080"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "ad.host",
+            "url_text": "atco-auth-sistemas-java.atco-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "ms.pgto.qrcode.endpoint",
+            "url_text": "pgto-transferencias-bacen-java.pgto-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "ms.pgto.payment.service",
+            "url_text": "pgto-transferencias-bacen-java.pgto-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "ms.ctas.balance.service",
+            "url_text": "ctas-saldo-java.ctas-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "ms.intp.produtor.pix.recebido.uri",
+            "url_text": "intp-produtor-pix-recebido-java.intp-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "ms.lipe.pix.service",
+            "url_text": "lipe-transacoes-java.lipe-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "ms.pgto.agendamento.pix.service",
+            "url_text": "pgto-agendamentos-pix-java.pgto-hml.svc.cluster.local:8080"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "ms.fwms.nsu.service",
+            "url_text": "fwms-nsu-java.fwms.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "ms.pgto.payment.service",
+            "url_text": "pgto-transferencias-bacen-java.pgto.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "ad.host",
+            "url_text": "atco-auth-sistemas-java.atco.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "ms.pgto.qrcode.endpoint",
+            "url_text": "pgto-transferencias-bacen-java.pgto.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "ms.ctas.balance.service",
+            "url_text": "ctas-saldo-java.ctas.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "ms.intp.produtor.pix.recebido.uri",
+            "url_text": "intp-produtor-pix-recebido-java.intp.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "ms.lipe.pix.service",
+            "url_text": "lipe-transacoes-java.lipe.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "ms.pgto.agendamento.pix.service",
+            "url_text": "pgto-agendamentos-pix-java.pgto.svc.cluster.local:8080"
+          }
+        ]
+      }
+    },
+    "pgto-agendamentos-pix-batch-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "ms.fwms.nsu.url",
+            "url_text": "fwms-nsu-java.apps.ocp-d.original.com.br"
+          },
+          {
+            "variable_name": "pgto.status.consult",
+            "url_text": "pgto-status-pagamentos-java.dev.apps.ocp-h.original.com.br/v2/status/consult"
+          },
+          {
+            "variable_name": "pgto.schedule.effective",
+            "url_text": "pgto-agendamentos-pix-java.apps.ocp-h.original.com.br/v1/payments/{id}/schedules/effectives"
+          },
+          {
+            "variable_name": "pgto.schedule.reject",
+            "url_text": "pgto-agendamentos-pix-java.apps.ocp-h.original.com.br/v1/payments/{id}/schedules/rejects"
+          },
+          {
+            "variable_name": "ad.host.endpoint",
+            "url_text": "atco-auth-sistemas-java.apps.ocp-d.original.com.br/v1/token"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "ms.fwms.nsu.url",
+            "url_text": "fwms-nsu-java.apps.ocp-h.original.com.br"
+          },
+          {
+            "variable_name": "pgto.status.consult",
+            "url_text": "pgto-status-pagamentos-java.hml.apps.ocp-h.original.com.br/v2/status/consult"
+          },
+          {
+            "variable_name": "pgto.schedule.effective",
+            "url_text": "pgto-agendamentos-pix-java.apps.ocp-h.original.com.br/v1/payments/{id}/schedules/effectives"
+          },
+          {
+            "variable_name": "pgto.schedule.reject",
+            "url_text": "pgto-agendamentos-pix-java.apps.ocp-h.original.com.br/v1/payments/{id}/schedules/rejects"
+          },
+          {
+            "variable_name": "ad.host.endpoint",
+            "url_text": "atco-auth-sistemas-java.apps.ocp-h.original.com.br/v1/token"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "ms.fwms.nsu.url",
+            "url_text": "fwms-nsu-java.original.com.br"
+          },
+          {
+            "variable_name": "pgto.status.consult",
+            "url_text": "pgto-status-pagamentos-java.original.com.br/v2/status/consult"
+          },
+          {
+            "variable_name": "pgto.schedule.effective",
+            "url_text": "pgto-agendamentos-pix-java.original.com.br/v1/payments/{id}/schedules/effectives"
+          },
+          {
+            "variable_name": "pgto.schedule.reject",
+            "url_text": "pgto-agendamentos-pix-java.original.com.br/v1/payments/{id}/schedules/rejects"
+          },
+          {
+            "variable_name": "ad.host.endpoint",
+            "url_text": "atco-auth-sistemas-java.original.com.br/v1/token"
+          }
+        ]
+      }
+    },
+    "pgto-notificacao-previa-agendamentos-pix-batch-java": {},
+    "pgto-valida-retorno-debito-automatico-batch-java": {},
+    "ctas-migrar-conta-pgto-movimentacao-batch-java": {},
+    "pgto-consumidor-liquidacao-consumo-tributos-erro-java": {},
+    "pgto-liquidacao-consumo-tributos-batch-java": {},
+    "pgto-liquidacoes-detran-java": {
+      "bootstrap": "original-legacy; pgto-corp;conv-integration; ctas-integration; crpl-integration"
+    },
+    "pgto-grade-horaria-java": {
+      "bootstrap": "original-legacy;pgto-corp;tbgr-integration"
+    },
+    "pgto-consumidor-transacoes-pix-varejo-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "original.auth-system.url",
+            "url_text": "bcodmswrk01:8229/auth-system/v1/token"
+          },
+          {
+            "variable_name": "original.pgto-transferencia-pix-java.base-url",
+            "url_text": "pgto-transferencia-pix-java.dev.apps.ocp-h.original.com.br"
+          },
+          {
+            "variable_name": "original.pgto-transferencias-bacen-java.base-url",
+            "url_text": "pgto-transferencias-bacen-java.dev.apps.ocp-h.original.com.br"
+          },
+          {
+            "variable_name": "original.pgto-comprovantes-pagamentos-java.url",
+            "url_text": "pgto-comprovantes-pagamentos-java.dev.apps.ocp-h.original.com.br"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "original.auth-system.url",
+            "url_text": "bcohmswrk11:8229/auth-system/v1/token"
+          },
+          {
+            "variable_name": "cloud.aws.end-point.uri",
+            "url_text": "sqs.sa-east-1.amazonaws.com/786423761420/transaction-verify.fifo"
+          },
+          {
+            "variable_name": "original.pgto-transferencia-pix-java.base-url",
+            "url_text": "pgto-transferencia-pix-java.apps.ocp-h.original.com.br"
+          },
+          {
+            "variable_name": "original.pgto-transferencias-bacen-java.base-url",
+            "url_text": "pgto-transferencias-bacen-java.apps.ocp-h.original.com.br"
+          },
+          {
+            "variable_name": "original.pgto-comprovantes-pagamentos-java.url",
+            "url_text": "pgto-comprovantes-pagamentos-java.apps.ocp-h.original.com.br"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "original.auth-system.url",
+            "url_text": "vsmscorporativo11.bcocorporate.ad:8229/auth-system/v1/token"
+          },
+          {
+            "variable_name": "cloud.aws.end-point.uri",
+            "url_text": "sqs.sa-east-1.amazonaws.com/331830111654/transaction-verify.fifo"
+          },
+          {
+            "variable_name": "original.pgto-transferencia-pix-java.base-url",
+            "url_text": "pgto-transferencia-pix-java.pgto.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "original.pgto-transferencias-bacen-java.base-url",
+            "url_text": "pgto-transferencias-bacen-java.pgto.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "original.pgto-comprovantes-pagamentos-java.url",
+            "url_text": "pgto-comprovantes-pagamentos-java.original.com.br"
+          }
+        ]
+      }
+    },
+    "pgto-produtor-transacoes-pix-varejo-java": {
+      "bootstrap": "pgto-corp; original-legacy",
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "original.fwms-nsu-java.base-url",
+            "url_text": "fwms-nsu-java.fwms-dev.svc.cluster.local:8080/v1"
+          },
+          {
+            "variable_name": "original.ctas-efetiva-debito-java.url",
+            "url_text": "ctas-efetivar-debito-java.ctas-dev.svc.cluster.local:8080/v1/debits"
+          },
+          {
+            "variable_name": "original.ctas-efetiva-credito-java.url",
+            "url_text": "ctas-efetivar-credito-java.ctas-dev.svc.cluster.local:8080/v1/credit-transferences"
+          },
+          {
+            "variable_name": "original.pgto-prepara-comprovante-java.url",
+            "url_text": "pgto-prepara-comprovante-java.pgto-dev.svc.cluster.local:8080/v1/prepare"
+          },
+          {
+            "variable_name": "original.pgto-comprovante-ted-java.url",
+            "url_text": "pgto-comprovante-ted-java.pgto-dev.svc.cluster.local:8080/v1/credit-transferences/receipts"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "original.fwms-nsu-java.base-url",
+            "url_text": "fwms-nsu-java.fwms-hml.svc.cluster.local:8080/v1"
+          },
+          {
+            "variable_name": "original.ctas-efetiva-debito-java.url",
+            "url_text": "ctas-efetivar-debito-java.ctas-hml.svc.cluster.local:8080/v1/debits"
+          },
+          {
+            "variable_name": "original.ctas-efetiva-credito-java.url",
+            "url_text": "ctas-efetivar-credito-java.ctas-hml.svc.cluster.local:8080/v1/credit-transferences"
+          },
+          {
+            "variable_name": "original.pgto-prepara-comprovante-java.url",
+            "url_text": "pgto-prepara-comprovante-java.pgto-hml.svc.cluster.local:8080/v1/prepare"
+          },
+          {
+            "variable_name": "original.pgto-comprovante-ted-java.url",
+            "url_text": "pgto-comprovante-ted-java.pgto-hml.svc.cluster.local:8080/v1/credit-transferences/receipts"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "original.fwms-nsu-java.base-url",
+            "url_text": "fwms-nsu-java.fwms.svc.cluster.local:8080/v1"
+          },
+          {
+            "variable_name": "original.ctas-efetiva-debito-java.url",
+            "url_text": "ctas-efetivar-debito-java.ctas.svc.cluster.local:8080/v1/debits"
+          },
+          {
+            "variable_name": "original.ctas-efetiva-credito-java.url",
+            "url_text": "ctas-efetivar-credito-java.ctas.svc.cluster.local:8080/v1/credit-transferences"
+          },
+          {
+            "variable_name": "original.pgto-prepara-comprovante-java.url",
+            "url_text": "pgto-prepara-comprovante-java.pgto.svc.cluster.local:8080/v1/prepare"
+          },
+          {
+            "variable_name": "original.pgto-comprovante-ted-java.url",
+            "url_text": "pgto-comprovante-ted-java.pgto.svc.cluster.local:8080/v1/credit-transferences/receipts"
+          }
+        ]
+      }
+    },
+    "pgto-reprocessamento-baixa-boletos-batch-java": {},
+    "pgto-cobranca-titulos-java": {
+      "application": {
+        "application-hml.properties": [
+          {
+            "variable_name": "original.gr.endpoint",
+            "url_text": "vssgrddawshom.bcocorporate.ad/sgr.net/ws/GR_BORServicesNC.asmx"
+          }
+        ],
+        "application.properties": [
+          {
+            "variable_name": "original.cbjbs.namespace",
+            "url_text": "autbank.com.br"
+          },
+          {
+            "variable_name": "original.gr.namespace",
+            "url_text": "tempuri.org/"
+          }
+        ]
+      }
+    },
+    "pgto-consumidor-baixa-boleto-proprio-java": {
+      "bootstrap": "pgto-corp;pgto-integration;atco-integration;original-legacy"
+    },
+    "pgto-produtor-baixa-boleto-proprio-java": {
+      "bootstrap": "pgto-corp"
+    },
+    "pgto-prepara-comprovante-java": {
+      "bootstrap": "pgto-corp; original-legacy",
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "url.cdps-consultar-informacoes-cliente-java.customers",
+            "url_text": "cdps-consultar-informacoes-cliente-pix-java.cdps-dev.svc.cluster.local:8080/v1/customers/list/searches"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "url.cdps-consultar-informacoes-cliente-java.customers",
+            "url_text": "cdps-consultar-informacoes-cliente-pix-java.cdps-hml.svc.cluster.local:8080/v1/customers/list/searches"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "url.cdps-consultar-informacoes-cliente-java.customers",
+            "url_text": "cdps-consultar-informacoes-cliente-pix-java.cdps.svc.cluster.local:8080/v1/customers/list/searches"
+          }
+        ]
+      }
+    },
+    "pgto-folha-pagamento-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "app.cdps.url",
+            "url_text": "cdps-consultar-informacoes-cliente-java.apps.ocp-d.original.com.br"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "app.cdps.url",
+            "url_text": "cdps-consultar-informacoes-cliente-java.apps.ocp-h.original.com.br"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "app.cdps.url",
+            "url_text": "cdps-consultar-informacoes-cliente-java.original.com.br"
+          }
+        ],
+        "application.properties": [
+          {
+            "variable_name": "app.cdps.url",
+            "url_text": "vshmsctnprodutos:8411/cdps-consultar-informacoes-cliente-java"
+          }
+        ]
+      }
+    },
+    "pgto-consumidor-ctrl-sit-java": {},
+    "pgto-consumidor-compv-pgto-java": {},
+    "pgto-consumidor-pgto-eft-java": {},
+    "pgto-consumidor-intp-soltc-java": {},
+    "pgto-consumidor-ctas-log-mov-java": {
+      "bootstrap": "pgto-corp; original-legacy"
+    },
+    "pgto-consumidor-ctas-trnsf-java": {},
+    "pgto-liquidacao-agendamento-ted-batch-java": {},
+    "pgto-retorno-agendamento-ted-batch-java": {},
+    "pgto-orquestrador-boletos-java": {
+      "bootstrap": "original-legacy;pgto-corp;cdps-integration;ctas-integration;tbgr-integration;pgto-integration;fwcl-corp"
+    },
+    "pgto-consumidor-baixa-boleto-java": {
+      "bootstrap": "pgto-corp;original-legacy;intp-integration;pgto-integration;atco-integration"
+    },
+    "pgto-consumidor-debitos-efetivados-java": {},
+    "pgto-consumidor-tabelas-sincronizacao-batch-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "host-api-tbgr",
+            "url_text": "tbgr-sincronizacao-tabelas-java.apps.ocp-d.original.com.br/v1"
+          },
+          {
+            "variable_name": "host-api-conv",
+            "url_text": "conv-sincronizacao-tabelas-java.apps.ocp-d.original.com.br/v1"
+          },
+          {
+            "variable_name": "host-api-ctas",
+            "url_text": "ctas-sincronizacao-tabelas-java.apps.ocp-d.original.com.br/v1"
+          },
+          {
+            "variable_name": "host-api-cdps",
+            "url_text": "cdps-sincronizacao-tabelas-java.apps.ocp-d.original.com.br/v1"
+          },
+          {
+            "variable_name": "original.url.authsystem.java",
+            "url_text": "atco-auth-sistemas-java.apps.ocp-h.original.com.br/v1/token"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "host-api-tbgr",
+            "url_text": "tbgr-sincronizacao-tabelas-java.apps.ocp-h.original.com.br/v1"
+          },
+          {
+            "variable_name": "host-api-conv",
+            "url_text": "conv-sincronizacao-tabelas-java.apps.ocp-h.original.com.br/v1"
+          },
+          {
+            "variable_name": "host-api-ctas",
+            "url_text": "ctas-sincronizacao-tabelas-java.apps.ocp-h.original.com.br/v1"
+          },
+          {
+            "variable_name": "host-api-cdps",
+            "url_text": "cdps-sincronizacao-tabelas-java.apps.ocp-h.original.com.br/v1"
+          },
+          {
+            "variable_name": "original.url.authsystem.java",
+            "url_text": "atco-auth-sistemas-java.apps.ocp-h.original.com.br/v1/token"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "host-api-tbgr",
+            "url_text": "tbgr-sincronizacao-tabelas-java.original.com.br/v1"
+          },
+          {
+            "variable_name": "host-api-conv",
+            "url_text": "conv-sincronizacao-tabelas-java.original.com.br/v1"
+          },
+          {
+            "variable_name": "host-api-ctas",
+            "url_text": "ctas-sincronizacao-tabelas-java.original.com.br/v1"
+          },
+          {
+            "variable_name": "host-api-cdps",
+            "url_text": "cdps-sincronizacao-tabelas-java.original.com.br/v1"
+          },
+          {
+            "variable_name": "original.url.authsystem.java",
+            "url_text": "atco-auth-sistemas-java.original.com.br/v1/token"
+          }
+        ]
+      }
+    },
+    "pgto-filtrar-ted-parcerias-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "original.auth-system.url",
+            "url_text": "bcodmswrk01:8229/auth-system/v1/token"
+          },
+          {
+            "variable_name": "original.parc.partnership-account-list.url",
+            "url_text": "bcodmswrkctn01:8643/parc-informacoes-cadastro-java/v1/partners/accounts"
+          },
+          {
+            "variable_name": "original.pgto.partner-callback.url",
+            "url_text": "bcodmswrkctn01:8645/pgto-notificacao-parceiro-java/v1/partners/notifications"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "original.auth-system.url",
+            "url_text": "bcohmswrk11:8229/auth-system/v1/token"
+          },
+          {
+            "variable_name": "original.parc.partnership-account-list.url",
+            "url_text": "vshmsctnprodutos:8643/parc-informacoes-cadastro-java/v1/partners/accounts"
+          },
+          {
+            "variable_name": "original.pgto.partner-callback.url",
+            "url_text": "vshmsctnprodutos:8645/pgto-notificacao-parceiro-java/v1/partners/notifications"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "original.auth-system.url",
+            "url_text": "vsmscorporativo11.bcocorporate.ad:8229/auth-system/v1/token"
+          },
+          {
+            "variable_name": "original.parc.partnership-account-list.url",
+            "url_text": "vsmsctnprodutos:8643/parc-informacoes-cadastro-java/v1/partners/accounts"
+          },
+          {
+            "variable_name": "original.pgto.partner-callback.url",
+            "url_text": "vsmsctnprodutos:8645/pgto-notificacao-parceiro-java/v1/partners/notifications"
+          }
+        ]
+      }
+    },
+    "pgto-tef-enriquecida-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "original.auth-system.url",
+            "url_text": "bcodmswrk01:8229/auth-system/v1/token"
+          },
+          {
+            "variable_name": "original.pgto.partner-callback.url",
+            "url_text": "bcodmswrkctn01:8645/pgto-notificacao-parceiro-java/v1/partners/notifications"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "original.auth-system.url",
+            "url_text": "bcohmswrk11:8229/auth-system/v1/token"
+          },
+          {
+            "variable_name": "original.pgto.partner-callback.url",
+            "url_text": "vshmsctnprodutos:8645/pgto-notificacao-parceiro-java/v1/partners/notifications"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "original.auth-system.url",
+            "url_text": "vsmscorporativo11.bcocorporate.ad:8229/auth-system/v1/token"
+          },
+          {
+            "variable_name": "original.pgto.partner-callback.url",
+            "url_text": "vsmsctnprodutos:8645/pgto-notificacao-parceiro-java/v1/partners/notifications"
+          }
+        ]
+      }
+    },
+    "pgto-filtrar-tef-parcerias-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "original.auth-system.url",
+            "url_text": "bcodmswrk01:8229/auth-system/v1/token"
+          },
+          {
+            "variable_name": "original.parc.partnership-account-list.url",
+            "url_text": "bcodmswrkctn01:8643/parc-informacoes-cadastro-java/v1/partners/accounts"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "original.auth-system.url",
+            "url_text": "bcohmswrk11:8229/auth-system/v1/token"
+          },
+          {
+            "variable_name": "original.parc.partnership-account-list.url",
+            "url_text": "vshmsctnprodutos:8643/parc-informacoes-cadastro-java/v1/partners/accounts"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "original.auth-system.url",
+            "url_text": "vsmscorporativo11.bcocorporate.ad:8229/auth-system/v1/token"
+          },
+          {
+            "variable_name": "original.parc.partnership-account-list.url",
+            "url_text": "vsmsctnprodutos:8643/parc-informacoes-cadastro-java/v1/partners/accounts"
+          }
+        ]
+      }
+    },
+    "pgto-notificacoes-nao-recebidas-parceiros-java": {},
+    "pgto-notificacao-parceiro-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "pgto.url.situation",
+            "url_text": "vshmsctnprodutos:8643/parc-informacoes-cadastro-java/v1"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "pgto.url.situation",
+            "url_text": "vshmsctnprodutos:8643/parc-informacoes-cadastro-java/v1"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "pgto.url.situation",
+            "url_text": "vsmsctnprodutos:8643/parc-informacoes-cadastro-java/v1"
+          }
+        ]
+      }
+    },
+    "pgto-consultar-transacoes-parceiro-java": {},
+    "pgto-consumidor-erros-tributos-consumos-java": {
+      "bootstrap": "pgto-corp; original-legacy; ctas-integration",
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "token.url.server",
+            "url_text": "bcodmswrk01:8229"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "token.url.server",
+            "url_text": "bcohmswrk11:8229"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "token.url.server",
+            "url_text": "vsmscorporativo11.bcocorporate.ad:8229"
+          }
+        ]
+      }
+    },
+    "pgto-integracao-conciliacao-bancoob-batch-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "siccob.host-token",
+            "url_text": "sandbox.sicoob.com.br"
+          },
+          {
+            "variable_name": "siccob.host-api",
+            "url_text": "sandbox.sicoob.com.br"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "siccob.host-token",
+            "url_text": "192.168.100.99:8280"
+          },
+          {
+            "variable_name": "siccob.host-api",
+            "url_text": "192.168.100.100:9443"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "siccob.host-token",
+            "url_text": "apim-interno.sicoob.com.br"
+          },
+          {
+            "variable_name": "siccob.host-api",
+            "url_text": "apim-interno.sicoob.com.br"
+          }
+        ]
+      }
+    },
+    "pgto-transferencias-parceiro-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "url.ctas-validar-aptidao-debito-parceiro-java",
+            "url_text": "ctas-validar-aptidao-debito-parceiro-java.ctas-dev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "url.ctas-lancamentos-a-efetivar-java",
+            "url_text": "ctas-lancamentos-a-efetivar-java.ctas-dev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "url.tbgr-consulta-regras-java",
+            "url_text": "bcodmswrkctn01:8340/tbgr-consulta-regras-java/v1"
+          },
+          {
+            "variable_name": "url.intp-movimentacoes-pagamentos-java",
+            "url_text": "intp-movimentacoes-pagamentos-java.intp-dev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "url.pgto-comprovante-ted-java",
+            "url_text": "pgto-comprovante-ted-java.pgto-dev.svc.cluster.local:8080"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "url.ctas-validar-aptidao-debito-parceiro-java",
+            "url_text": "ctas-validar-aptidao-debito-parceiro-java.ctas-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "url.ctas-lancamentos-a-efetivar-java",
+            "url_text": "ctas-lancamentos-a-efetivar-java.ctas-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "url.tbgr-consulta-regras-java",
+            "url_text": "vshmsctnprodutos:8340/tbgr-consulta-regras-java/v1"
+          },
+          {
+            "variable_name": "url.intp-movimentacoes-pagamentos-java",
+            "url_text": "intp-movimentacoes-pagamentos-java.intp-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "url.pgto-comprovante-ted-java",
+            "url_text": "pgto-comprovante-ted-java.pgto-hml.svc.cluster.local:8080"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "url.ctas-validar-aptidao-debito-parceiro-java",
+            "url_text": "ctas-validar-aptidao-debito-parceiro-java.ctas.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "url.ctas-lancamentos-a-efetivar-java",
+            "url_text": "ctas-lancamentos-a-efetivar-java.ctas.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "url.tbgr-consulta-regras-java",
+            "url_text": "vsmsctnprodutos:8340/tbgr-consulta-regras-java/v1"
+          },
+          {
+            "variable_name": "url.intp-movimentacoes-pagamentos-java",
+            "url_text": "intp-movimentacoes-pagamentos-java.intp.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "url.pgto-comprovante-ted-java",
+            "url_text": "pgto-comprovante-ted-java.pgto.svc.cluster.local:8080"
+          }
+        ]
+      }
+    },
+    "pgto-consumer-tef-parceiro-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "send.ctas.post-account",
+            "url_text": "ctas-lancamentos-a-efetivar-java.apps.ocp-d.original.com.br/v1/account-postings"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "send.ctas.post-account",
+            "url_text": "ctas-lancamentos-a-efetivar-java.apps.ocp-h.original.com.br/v1/account-postings"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "send.ctas.post-account",
+            "url_text": "ctas-lancamentos-a-efetivar-java.original.com.br/v1/account-postings"
+          }
+        ]
+      }
+    },
+    "pgto-consumer-ted-parceiro-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "intp.recebimento.receive.send",
+            "url_text": "vshmsctnprodutos:8178/sendReceive/send"
+          },
+          {
+            "variable_name": "ted.callback",
+            "url_text": "vshmsctnprodutos:8343/pgto-callback-ted-java/v1/partner/credit-transference/feedback/handling"
+          },
+          {
+            "variable_name": "partner.user.url",
+            "url_text": "vshmsctnprodutos:8182/intp/payment-requests/v1/configuration-parameters/"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "intp.recebimento.receive.send",
+            "url_text": "vshmsctnprodutos:8178/sendReceive/send"
+          },
+          {
+            "variable_name": "ted.callback",
+            "url_text": "vshmsctnprodutos:8343/pgto-callback-ted-java/v1/partner/credit-transference/feedback/handling"
+          },
+          {
+            "variable_name": "partner.user.url",
+            "url_text": "vshmsctnprodutos:8182/intp/payment-requests/v1/configuration-parameters/"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "intp.recebimento.receive.send",
+            "url_text": "vsmsctnprodutos:8178/sendReceive/send"
+          },
+          {
+            "variable_name": "ted.callback",
+            "url_text": "vsmsctnprodutos:8343/pgto-callback-ted-java/v1/partner/credit-transference/feedback/handling"
+          },
+          {
+            "variable_name": "partner.user.url",
+            "url_text": "vsmsctnprodutos:8182/intp/payment-requests/v1/configuration-parameters/"
+          }
+        ]
+      }
+    },
+    "pgto-consumer-devolucao-parceiro-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "send.ctas.post-account",
+            "url_text": "ctas-lancamentos-a-efetivar-java.apps.ocp-d.original.com.br/v1/account-postings"
+          },
+          {
+            "variable_name": "send.pgto.post-notification",
+            "url_text": "bcodmswrkctn01:8645/pgto-notificacao-parceiro-java/v1/partners/notifications"
+          },
+          {
+            "variable_name": "send.intp.get-consultTransactions",
+            "url_text": "bcodmswrkctn01:8309/intp-movimentacoes-pagamentos-java/v1/consultErrorsBacen/"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "send.ctas.post-account",
+            "url_text": "ctas-lancamentos-a-efetivar-java.apps.ocp-h.original.com.br/v1/account-postings"
+          },
+          {
+            "variable_name": "send.pgto.post-notification",
+            "url_text": "vshmsctnprodutos:8645/pgto-notificacao-parceiro-java/v1/partners/notifications"
+          },
+          {
+            "variable_name": "send.intp.get-consultTransactions",
+            "url_text": "vshmsctnprodutos:8309/intp-movimentacoes-pagamentos-java/v1/consultErrorsBacen/"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "send.ctas.post-account",
+            "url_text": "ctas-lancamentos-a-efetivar-java.original.com.br/v1/account-postings"
+          },
+          {
+            "variable_name": "send.pgto.post-notification",
+            "url_text": "vsmsctnprodutos01:8645/pgto-notificacao-parceiro-java/v1/partners/notifications"
+          },
+          {
+            "variable_name": "send.intp.get-consultTransactions",
+            "url_text": "vsmsctnprodutos01:8309/intp-movimentacoes-pagamentos-java/v1/consultErrorsBacen/"
+          }
+        ]
+      }
+    },
+    "pgto-recebimento-tributos-consumos-java": {
+      "bootstrap": "pgto-corp; original-legacy"
+    },
+    "pgto-liquidar-tributos-consumos-java": {
+      "bootstrap": "pgto-corp",
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "siccob.host-api",
+            "url_text": "sandbox.sicoob.com.br"
+          },
+          {
+            "variable_name": "siccob.host-token",
+            "url_text": "sandbox.sicoob.com.br"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "siccob.host-api",
+            "url_text": "192.168.100.100:9443"
+          },
+          {
+            "variable_name": "siccob.host-token",
+            "url_text": "192.168.100.99:8280"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "siccob.host-api",
+            "url_text": "192.168.110.87"
+          },
+          {
+            "variable_name": "siccob.host-token",
+            "url_text": "192.168.110.87"
+          }
+        ]
+      }
+    },
+    "pgto-cmm-rest-java": {
+      "feign": [
+        {
+          "file": "AccountFeingService.java",
+          "url": "ctas.cmm.rest.java.url"
+        }
+      ],
+      "bootstrap": "original-legacy;ctas-integration; acpf-integration ; mcsv-integration ; atcl-integration ;cnio-corp"
+    },
+    "pgto-credito-imediato-cmm-rest-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "original.soap.url",
+            "url_text": "vscmmhom:7080/CMM_SERVICES"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "original.soap.url",
+            "url_text": "vscmmhom:7080/CMM_SERVICES"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "original.soap.url",
+            "url_text": "vscmmprod:7080/CMM_SERVICES"
+          }
+        ]
+      }
+    },
+    "pgto-tratar-retorno-folha-pagamento-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "address.server",
+            "url_text": "localhost:8096/cmmo-ctas/v1/conta/restricao"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "address.server",
+            "url_text": "localhost:8096/cmmo-ctas/v1/conta/restricao"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "address.server",
+            "url_text": "localhost:8096/cmmo-ctas/v1/conta/restricao"
+          }
+        ]
+      }
+    },
+    "pgto-status-abertura-conta-salario-batch-java": {},
+    "pgto-relatorio-contas-2025-batch-java": {},
+    "pgto-recibos-java": {
+      "bootstrap": "pgto-corp;pgto-integration;original-legacy"
+    },
+    "pgto-portabilidade-salario-java": {},
+    "pgto-portabilidade-salario-2025-batch-java": {},
+    "pgto-transferencias-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "url.cdps-consultar-informacoes-cliente-java.customers",
+            "url_text": "cdps-consultar-informacoes-cliente-java.cdps-dev.svc.cluster.local:8080/v1/customers/list/searches"
+          },
+          {
+            "variable_name": "endpoint.ctas-efetivar-debito-java.host",
+            "url_text": "ctas-efetivar-debito-java.ctas-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.ctas-efetivar-credito-java.host",
+            "url_text": "ctas-efetivar-credito-java.ctas-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-prepara-comprovante-java.host",
+            "url_text": "pgto-prepara-comprovante-java.pgto-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-comprovante-ted-java.host",
+            "url_text": "pgto-comprovante-ted-java.pgto-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.ctas-saldo-java.host",
+            "url_text": "ctas-saldo-java.ctas-hml.svc.cluster.local"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "url.cdps-consultar-informacoes-cliente-java.customers",
+            "url_text": "cdps-consultar-informacoes-cliente-java.cdps-hml.svc.cluster.local:8080/v1/customers/list/searches"
+          },
+          {
+            "variable_name": "endpoint.ctas-efetivar-debito-java.host",
+            "url_text": "ctas-efetivar-debito-java.ctas-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.ctas-efetivar-credito-java.host",
+            "url_text": "ctas-efetivar-credito-java.ctas-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-prepara-comprovante-java.host",
+            "url_text": "pgto-prepara-comprovante-java.pgto-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-comprovante-ted-java.host",
+            "url_text": "pgto-comprovante-ted-java.pgto-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.ctas-saldo-java.host",
+            "url_text": "ctas-saldo-java.ctas-hml.svc.cluster.local"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "url.cdps-consultar-informacoes-cliente-java.customers",
+            "url_text": "cdps-consultar-informacoes-cliente-java.cdps.svc.cluster.local:8080/v1/customers/list/searches"
+          },
+          {
+            "variable_name": "endpoint.ctas-efetivar-debito-java.host",
+            "url_text": "ctas-efetivar-debito-java.ctas.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.ctas-efetivar-credito-java.host",
+            "url_text": "ctas-efetivar-credito-java.ctas.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-prepara-comprovante-java.host",
+            "url_text": "pgto-prepara-comprovante-java.pgto.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-comprovante-ted-java.host",
+            "url_text": "pgto-comprovante-ted-java.pgto.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.ctas-saldo-java.host",
+            "url_text": "ctas-saldo-java.ctas.svc.cluster.local"
+          }
+        ]
+      }
+    },
+    "pgto-status-pagamentos-java": {},
+    "pgto-comprovantes-pagamentos-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "endpoint.ipix-leit-qr-code-searches-java.host",
+            "url_text": "NLB-development-04490c85841a1e74.elb.sa-east-1.amazonaws.com"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "endpoint.ipix-leit-qr-code-searches-java.host",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "endpoint.ipix-leit-qr-code-searches-java.host",
+            "url_text": "NLB-production-d2f4ae9c4ba4e07b.elb.sa-east-1.amazonaws.com"
+          }
+        ]
+      }
+    },
+    "pgto-conciliacao-pagamentos\u200b-parceiros-batch-java": {},
+    "pgto-boletos-java": {
+      "bootstrap": "original-legacy;pgto-corp;pgto-integration;tbgr-integration;autbank-integration",
+      "application": {
+        "application.properties": [
+          {
+            "variable_name": "original.gr.namespace",
+            "url_text": "tempuri.org/"
+          },
+          {
+            "variable_name": "original.cbs.namespace",
+            "url_text": "autbank.com.br"
+          }
+        ]
+      }
+    },
+    "pgto-callback-ted-java": {
+      "bootstrap": "pgto-corp; original-legacy; tbgr-integration; intp-integration; pgto-integration; ctas-integration; cdps-integration"
+    },
+    "pgto-enviar-ted-java": {
+      "bootstrap": "pgto-corp; original-legacy; ctas-integration; pgto-integration; intp-integration; cdps-integration; tbgr-integration"
+    },
+    "pgto-comprovante-ted-java": {
+      "bootstrap": "pgto-corp; original-legacy; intp-integration"
+    },
+    "pgto-retornar-status-ted-lote-java": {},
+    "pgto-registros-ted-lote-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "br.com.original.url.orquestrador",
+            "url_text": "bcodmswrkctn01:8345/pgto/v1/credit-transferences"
+          },
+          {
+            "variable_name": "br.com.original.swagger.termsOfServiceUrl",
+            "url_text": "www.original.com.br"
+          },
+          {
+            "variable_name": "br.com.original.swagger.contact.url",
+            "url_text": "www.original.com.br"
+          },
+          {
+            "variable_name": "auth.api.url",
+            "url_text": "vshmsctnprodutos:8229/auth-system/v1/token"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "br.com.original.url.orquestrador",
+            "url_text": "vshmsctnprodutos:8345/pgto/v1/credit-transferences"
+          },
+          {
+            "variable_name": "br.com.original.swagger.termsOfServiceUrl",
+            "url_text": "www.original.com.br"
+          },
+          {
+            "variable_name": "br.com.original.swagger.contact.url",
+            "url_text": "www.original.com.br"
+          },
+          {
+            "variable_name": "auth.api.url",
+            "url_text": "vshmsctnprodutos:8229/auth-system/v1/token"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "br.com.original.url.orquestrador",
+            "url_text": "vsmsctnprodutos:8345/pgto/v1/credit-transferences"
+          },
+          {
+            "variable_name": "br.com.original.swagger.termsOfServiceUrl",
+            "url_text": "www.original.com.br"
+          },
+          {
+            "variable_name": "br.com.original.swagger.contact.url",
+            "url_text": "www.original.com.br"
+          },
+          {
+            "variable_name": "auth.api.url",
+            "url_text": "BCOPMSBATCH11:8229/auth-system/v1/token"
+          }
+        ]
+      }
+    },
+    "pgto-transferencias-bacen-java": {
+      "bootstrap": "pgto-corp; original-legacy",
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "app.info.endpoint-base-aws",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com"
+          },
+          {
+            "variable_name": "endpoint.intp-orquestrador-spi-java-java.host",
+            "url_text": "NLB-development-04490c85841a1e74.elb.sa-east-1.amazonaws.com"
+          },
+          {
+            "variable_name": "endpoint.intp-consulta-chave-acesso-java.host",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com"
+          },
+          {
+            "variable_name": "endpoint.pgto-transferencias-java.host",
+            "url_text": "pgto-transferencias-java.pgto-dev.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.ctas-efetivar-debito-java.host",
+            "url_text": "ctas-efetivar-debito-java.ctas-dev.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.ctas-efetivar-credito-java.host",
+            "url_text": "ctas-efetivar-credito-java.ctas-dev.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-status-pagamentos-java.host",
+            "url_text": "pgto-status-pagamentos-java.pgto-dev.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-comprovantes-pagamentos-java.host",
+            "url_text": "pgto-comprovantes-pagamentos-java.pgto-dev.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.intp-comprovantes-pagamentos-java.host",
+            "url_text": "intp-comprovantes-pagamentos-java.intp-dev.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.aspa-manutencao-participantes-java.host",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com"
+          },
+          {
+            "variable_name": "endpoint.pgto.host",
+            "url_text": "bcohmswrkctn01"
+          },
+          {
+            "variable_name": "endpoint.pgto-prepara-comprovante-java.host",
+            "url_text": "pgto-prepara-comprovante-java.pgto-dev.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-comprovante-ted-java.host",
+            "url_text": "pgto-comprovante-ted-java.pgto-dev.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.ipix-leit-qr-code.host",
+            "url_text": "NLB-development-04490c85841a1e74.elb.sa-east-1.amazonaws.com"
+          },
+          {
+            "variable_name": "endpoint.aspa-configuracao-psti.host",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com"
+          },
+          {
+            "variable_name": "endpoint.transaction-limit",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com:2009/ipix-limite-transacoes-java/v1/transactions/check-limits"
+          },
+          {
+            "variable_name": "endpoint.ipix-comprovantes-psti",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com:2196/ipix-comprovantes-psti/v1/receipt/consult"
+          },
+          {
+            "variable_name": "endpoint.ctas-saldo-valid-java.host",
+            "url_text": "ctas-saldo-java.ctas-dev.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-chargeback-java.host",
+            "url_text": "pgto-transferencias-bacen-java.pgto-dev.svc.cluster.local"
+          },
+          {
+            "variable_name": "url.cdps-consultar-informacoes-cliente-java.customers",
+            "url_text": "cdps-consultar-informacoes-cliente-pix-java.cdps-dev.svc.cluster.local:8080/v1/customers/list/searches"
+          },
+          {
+            "variable_name": "endpoint.acad-consulta-informacoes.host",
+            "url_text": "acad-consultar-informacoes-java.acad-dev.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.intp-produtor-pix-recebido.uri",
+            "url_text": "intp-produtor-pix-recebido-java.intp-dev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "endpoint.lipe-transacoes-java.host",
+            "url_text": "lipe-transacoes-java.lipe-dev.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-comprovante-ted-java.update",
+            "url_text": "pgto-comprovante-ted-java.pgto-dev.svc.cluster.local:8080/v1/credit-transferences/receipts"
+          },
+          {
+            "variable_name": "endpoint.pgto-agendamentos-pix-java-consult-end2end",
+            "url_text": "pgto-agendamentos-pix-java.pgto-dev.svc.cluster.local:8080/v1/receipt/schedules/{end2End}/receipts/end2end"
+          },
+          {
+            "variable_name": "endpoint.pgto-transferencias-java.transfers-v2.host",
+            "url_text": "pgto-transferencias-java.pgto-dev.svc.cluster.local:8080/v2/transfers"
+          },
+          {
+            "variable_name": "endpoint.pgto-transferencias-java.transfers-saque-troco-v2.host",
+            "url_text": "pgto-transferencias-java.pgto-dev.svc.cluster.local:8080/v2/transfers/toreceive"
+          },
+          {
+            "variable_name": "endpoint.pgto-prepara-comprovante-java-consult-end2end.host",
+            "url_text": "pgto-prepara-comprovante-java.pgto-dev.svc.cluster.local:8080/v1/prepare/schedule/{transactionId}"
+          },
+          {
+            "variable_name": "endpoint.pgto-transferencias-java.transfers-schedule.host",
+            "url_text": "pgto-transferencias-java.pgto-dev.svc.cluster.local:8080/v1/transfers/schedules"
+          },
+          {
+            "variable_name": "endpoint.ipix-controle-consultas-chaves-java.remove-token-bucket",
+            "url_text": "ipix-controle-consultas-chaves-java.ipix-dev.svc.cluster.local:8080/v1/buckets/remove"
+          },
+          {
+            "variable_name": "cmmo.ceno.host",
+            "url_text": "bcohmswrk11"
+          },
+          {
+            "variable_name": "endpoint.ipix-conciliacao-pix-java-conciliations",
+            "url_text": "ipix-conciliacao-pix-java.ipix-dev.svc.cluster.local:8080/v1/conciliations"
+          },
+          {
+            "variable_name": "endpoint.ipix-manutencao-conciliacao-pix-java.host",
+            "url_text": "ipix-manutencao-conciliacao-pix-java.ipix-dev.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-favorecidos-java.host",
+            "url_text": "pgto-favorecidos-pagamentos-java.pgto-dev.svc.cluster.local:8080"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "app.info.endpoint-base-aws",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com"
+          },
+          {
+            "variable_name": "endpoint.intp-orquestrador-spi-java-java.host",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com"
+          },
+          {
+            "variable_name": "endpoint.intp-consulta-chave-acesso-java.host",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com"
+          },
+          {
+            "variable_name": "endpoint.pgto-transferencias-java.host",
+            "url_text": "pgto-transferencias-java.pgto-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.ctas-efetivar-debito-java.host",
+            "url_text": "ctas-efetivar-debito-java.ctas-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.ctas-efetivar-credito-java.host",
+            "url_text": "ctas-efetivar-credito-java.ctas-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-status-pagamentos-java.host",
+            "url_text": "pgto-status-pagamentos-java.pgto-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-comprovantes-pagamentos-java.host",
+            "url_text": "pgto-comprovantes-pagamentos-java.pgto-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.intp-comprovantes-pagamentos-java.host",
+            "url_text": "intp-comprovantes-pagamentos-java.intp-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.aspa-manutencao-participantes-java.host",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com"
+          },
+          {
+            "variable_name": "endpoint.pgto.host",
+            "url_text": "bcohmswrkctn01.bcocorporate.ad"
+          },
+          {
+            "variable_name": "endpoint.pgto-prepara-comprovante-java.host",
+            "url_text": "pgto-prepara-comprovante-java.pgto-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-comprovante-ted-java.host",
+            "url_text": "pgto-comprovante-ted-java.pgto-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.aspa-configuracao-psti.host",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com"
+          },
+          {
+            "variable_name": "endpoint.ipix-leit-qr-code.host",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com"
+          },
+          {
+            "variable_name": "endpoint.transaction-limit",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com:2009/ipix-limite-transacoes-java/v1/transactions/check-limits"
+          },
+          {
+            "variable_name": "endpoint.ipix-comprovantes-psti",
+            "url_text": "nlb-homolog2-5fe5bd18225aec14.elb.sa-east-1.amazonaws.com:2196/ipix-comprovantes-psti/v1/receipt/consult"
+          },
+          {
+            "variable_name": "endpoint.ctas-saldo-valid-java.host",
+            "url_text": "ctas-saldo-java.ctas-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.intp-produtor-pix-recebido.uri",
+            "url_text": "intp-produtor-pix-recebido-java.intp-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "endpoint.pgto-chargeback-java.host",
+            "url_text": "pgto-transferencias-bacen-java.pgto-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "url.cdps-consultar-informacoes-cliente-java.customers",
+            "url_text": "cdps-consultar-informacoes-cliente-pix-java.cdps-hml.svc.cluster.local:8080/v1/customers/list/searches"
+          },
+          {
+            "variable_name": "endpoint.acad-consulta-informacoes.host",
+            "url_text": "acad-consultar-informacoes-java.acad-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.lipe-transacoes-java.host",
+            "url_text": "lipe-transacoes-java.lipe-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-comprovante-ted-java.update",
+            "url_text": "pgto-comprovante-ted-java.pgto-hml.svc.cluster.local:8080/v1/credit-transferences/receipts"
+          },
+          {
+            "variable_name": "endpoint.pgto-agendamentos-pix-java-consult-end2end",
+            "url_text": "pgto-agendamentos-pix-java.pgto-hml.svc.cluster.local:8080/v1/receipt/schedules/{end2End}/receipts/end2end"
+          },
+          {
+            "variable_name": "endpoint.pgto-transferencias-java.transfers-v2.host",
+            "url_text": "pgto-transferencias-java.pgto-hml.svc.cluster.local:8080/v2/transfers"
+          },
+          {
+            "variable_name": "endpoint.pgto-transferencias-java.transfers-saque-troco-v2.host",
+            "url_text": "pgto-transferencias-java.pgto-hml.svc.cluster.local:8080/v2/transfers/toreceive"
+          },
+          {
+            "variable_name": "endpoint.pgto-prepara-comprovante-java-consult-end2end.host",
+            "url_text": "pgto-prepara-comprovante-java.pgto-hml.svc.cluster.local:8080/v1/prepare/schedule/{transactionId}"
+          },
+          {
+            "variable_name": "endpoint.pgto-transferencias-java.transfers-schedule.host",
+            "url_text": "pgto-transferencias-java.pgto-hml.svc.cluster.local:8080/v1/transfers/schedules"
+          },
+          {
+            "variable_name": "endpoint.ipix-controle-consultas-chaves-java.remove-token-bucket",
+            "url_text": "ipix-controle-consultas-chaves-java.ipix-hml.svc.cluster.local:8080/v1/buckets/remove"
+          },
+          {
+            "variable_name": "cmmo.ceno.host",
+            "url_text": "bcohmswrk11.bcocorporate.ad"
+          },
+          {
+            "variable_name": "endpoint.ipix-conciliacao-pix-java-conciliations",
+            "url_text": "ipix-conciliacao-pix-java.ipix-hml.svc.cluster.local:8080/v1/conciliations"
+          },
+          {
+            "variable_name": "endpoint.ipix-manutencao-conciliacao-pix-java.host",
+            "url_text": "ipix-manutencao-conciliacao-pix-java.ipix-hml.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-favorecidos-java.host",
+            "url_text": "pgto-favorecidos-pagamentos-java.pgto-hml.svc.cluster.local:8080"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "endpoint.intp-orquestrador-spi-java-java.host",
+            "url_text": "NLB-production-d2f4ae9c4ba4e07b.elb.sa-east-1.amazonaws.com"
+          },
+          {
+            "variable_name": "endpoint.intp-consulta-chave-acesso-java.host",
+            "url_text": "NLB-production-d2f4ae9c4ba4e07b.elb.sa-east-1.amazonaws.com"
+          },
+          {
+            "variable_name": "endpoint.pgto-transferencias-java.host",
+            "url_text": "pgto-transferencias-java.pgto.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.ctas-efetivar-debito-java.host",
+            "url_text": "ctas-efetivar-debito-java.ctas.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.ctas-efetivar-credito-java.host",
+            "url_text": "ctas-efetivar-credito-java.ctas.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-status-pagamentos-java.host",
+            "url_text": "pgto-status-pagamentos-java.pgto.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-comprovantes-pagamentos-java.host",
+            "url_text": "pgto-comprovantes-pagamentos-java.pgto.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.intp-comprovantes-pagamentos-java.host",
+            "url_text": "intp-comprovantes-pagamentos-java.intp.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.aspa-manutencao-participantes-java.host",
+            "url_text": "NLB-production-d2f4ae9c4ba4e07b.elb.sa-east-1.amazonaws.com"
+          },
+          {
+            "variable_name": "endpoint.pgto.host",
+            "url_text": "vsmsctnprodutos.bcocorporate.ad"
+          },
+          {
+            "variable_name": "endpoint.pgto-prepara-comprovante-java.host",
+            "url_text": "pgto-prepara-comprovante-java.pgto.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-comprovante-ted-java.host",
+            "url_text": "pgto-comprovante-ted-java.pgto.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.aspa-configuracao-psti.host",
+            "url_text": "NLB-production-d2f4ae9c4ba4e07b.elb.sa-east-1.amazonaws.com"
+          },
+          {
+            "variable_name": "endpoint.transaction-limit",
+            "url_text": "NLB-production-d2f4ae9c4ba4e07b.elb.sa-east-1.amazonaws.com:2009/ipix-limite-transacoes-java/v1/transactions/check-limits"
+          },
+          {
+            "variable_name": "endpoint.ipix-leit-qr-code.host",
+            "url_text": "NLB-production-d2f4ae9c4ba4e07b.elb.sa-east-1.amazonaws.com"
+          },
+          {
+            "variable_name": "endpoint.ipix-comprovantes-psti",
+            "url_text": "NLB-production2-a0ac5383927a9ee7.elb.sa-east-1.amazonaws.com:2196/ipix-comprovantes-psti/v1/receipt/consult"
+          },
+          {
+            "variable_name": "endpoint.intp-produtor-pix-recebido.uri",
+            "url_text": "intp-produtor-pix-recebido-java.intp.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "endpoint.ctas-saldo-valid-java.host",
+            "url_text": "ctas-saldo-java.ctas.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-chargeback-java.host",
+            "url_text": "pgto-transferencias-bacen-java.pgto.svc.cluster.local"
+          },
+          {
+            "variable_name": "url.cdps-consultar-informacoes-cliente-java.customers",
+            "url_text": "cdps-consultar-informacoes-cliente-pix-java.cdps.svc.cluster.local:8080/v1/customers/list/searches"
+          },
+          {
+            "variable_name": "endpoint.acad-consulta-informacoes.host",
+            "url_text": "acad-consultar-informacoes-java.acad.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.lipe-transacoes-java.host",
+            "url_text": "lipe-transacoes-java.lipe.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-comprovante-ted-java.update",
+            "url_text": "pgto-comprovante-ted-java.pgto.svc.cluster.local:8080/v1/credit-transferences/receipts"
+          },
+          {
+            "variable_name": "endpoint.pgto-agendamentos-pix-java-consult-end2end",
+            "url_text": "pgto-agendamentos-pix-java.pgto.svc.cluster.local:8080/v1/receipt/schedules/{end2End}/receipts/end2end"
+          },
+          {
+            "variable_name": "endpoint.pgto-transferencias-java.transfers-v2.host",
+            "url_text": "pgto-transferencias-java.pgto.svc.cluster.local:8080/v2/transfers"
+          },
+          {
+            "variable_name": "endpoint.pgto-transferencias-java.transfers-saque-troco-v2.host",
+            "url_text": "pgto-transferencias-java.pgto.svc.cluster.local:8080/v2/transfers/toreceive"
+          },
+          {
+            "variable_name": "endpoint.pgto-prepara-comprovante-java-consult-end2end.host",
+            "url_text": "pgto-prepara-comprovante-java.pgto.svc.cluster.local:8080/v1/prepare/schedule/{transactionId}"
+          },
+          {
+            "variable_name": "endpoint.pgto-transferencias-java.transfers-schedule.host",
+            "url_text": "pgto-transferencias-java.pgto.svc.cluster.local:8080/v1/transfers/schedules"
+          },
+          {
+            "variable_name": "endpoint.ipix-controle-consultas-chaves-java.remove-token-bucket",
+            "url_text": "ipix-controle-consultas-chaves-java.ipix.svc.cluster.local:8080/v1/buckets/remove"
+          },
+          {
+            "variable_name": "cmmo.ceno.host",
+            "url_text": "vsmscorporativo11.bcocorporate.ad"
+          },
+          {
+            "variable_name": "endpoint.ipix-conciliacao-pix-java-conciliations",
+            "url_text": "ipix-conciliacao-pix-java.ipix.svc.cluster.local:8080/v1/conciliations"
+          },
+          {
+            "variable_name": "endpoint.ipix-manutencao-conciliacao-pix-java.host",
+            "url_text": "ipix-manutencao-conciliacao-pix-java.ipix.svc.cluster.local"
+          },
+          {
+            "variable_name": "endpoint.pgto-favorecidos-java.host",
+            "url_text": "pgto-favorecidos-pagamentos-java.pgto.svc.cluster.local:8080"
+          }
+        ]
+      }
+    },
+    "pgto-servicos-cmm-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "cmm.endpoint",
+            "url_text": "BCODCMM01:7080/CMM_SERVICES"
+          },
+          {
+            "variable_name": "original.core.cmm.endpoint",
+            "url_text": "BCODCMM01:7080/CMM_SERVICES"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "cmm.endpoint",
+            "url_text": "VSCMMHOM:7080/CMM_SERVICES"
+          },
+          {
+            "variable_name": "original.core.cmm.endpoint",
+            "url_text": "VSCMMHOM:7080/CMM_SERVICES"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "cmm.endpoint",
+            "url_text": "VSCMMPROD:7080/CMM_SERVICES"
+          },
+          {
+            "variable_name": "original.core.cmm.endpoint",
+            "url_text": "VSCMMPROD:7080/CMM_SERVICES"
+          }
+        ]
+      }
+    },
+    "pgto-comprovantes-java": {
+      "bootstrap": "original-legacy; pgto-corp; conv-integration; tbgr-integration"
+    },
+    "pgto-codigo-barras-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "original.core.cmm.endpoint",
+            "url_text": "bcodcmm01:7080/CMM_SERVICES"
+          },
+          {
+            "variable_name": "app.cdps.url",
+            "url_text": "bcodmetaapp01:8099/cmmo-cdps/v1"
+          },
+          {
+            "variable_name": "app.pgto.servicos.cmm.v1.url",
+            "url_text": "bcodmswrkctn01:8192/pgto-servicos-cmm-java/v1"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "original.core.cmm.endpoint",
+            "url_text": "vscmmhom.bcocorporate.ad:7080/CMM_SERVICES"
+          },
+          {
+            "variable_name": "app.cdps.url",
+            "url_text": "bcohmetaapp01:8099/cmmo-cdps/v1"
+          },
+          {
+            "variable_name": "app.pgto.servicos.cmm.v1.url",
+            "url_text": "vshmsctnprodutos:8192/pgto-servicos-cmm-java/v1"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "original.core.cmm.endpoint",
+            "url_text": "VSCMMPROD:7080/CMM_SERVICES"
+          },
+          {
+            "variable_name": "app.cdps.url",
+            "url_text": "vsmscorporativo8.bcocorporate.ad:8099/cmmo-cdps/v1"
+          },
+          {
+            "variable_name": "app.pgto.servicos.cmm.v1.url",
+            "url_text": "vsmsctnprodutos.bcocorporate.ad:8192/pgto-servicos-cmm-java/v1"
+          }
+        ]
+      }
+    }
+  },
+  "port": {
+    "ctas-portabilidade-salario-batch-java": {
+      "bootstrap": "ctas-corp; original-legacy; fwcl-corp"
+    },
+    "mcsv-portabilidade-previdencia-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "feign.prev.portabilidade.url",
+            "url_text": "prev-portabilidade-java.prev-dev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "feign.prev.consulta.url",
+            "url_text": "prev-consulta-java.prev-dev.svc.cluster.local:8080"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "feign.prev.portabilidade.url",
+            "url_text": "prev-portabilidade-java.prev-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "feign.prev.consulta.url",
+            "url_text": "prev-consulta-java.prev-hml.svc.cluster.local:8080"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "feign.prev.portabilidade.url",
+            "url_text": "prev-portabilidade-java.prev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "feign.prev.consulta.url",
+            "url_text": "prev-consulta-java.prev.svc.cluster.local:8080"
+          }
+        ]
+      }
+    },
+    "pgto-portabilidade-salario-java": {},
+    "pgto-portabilidade-salario-2025-batch-java": {}
+  },
+  "trnf": {},
+  "alcd": {},
+  "antv": {},
+  "atad": {},
+  "atcl": {
+    "atcl-autenticacao-teclado-virtual-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "atcl.perfilamento.endpoint",
+            "url_text": "bcodinfra01:8090/backend-Perfilamiento-1.0.0/webservices/loginService"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "atcl.perfilamento.endpoint",
+            "url_text": "bcohinfra01:8090/backend-Perfilamiento-1.0.0/webservices/loginService"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "atcl.perfilamento.endpoint",
+            "url_text": "10.150.100.142:8090/backend-Perfilamiento-1.0.0/webservices/loginService"
+          }
+        ]
+      }
+    }
+  },
+  "atco": {},
+  "atfd": {},
+  "atkn": {},
+  "clbk": {},
+  "herm": {},
+  "retr": {},
+  "bpmo": {
+    "mcsv-interno-consultas-bpmo-java": {
+      "feign": [
+        {
+          "file": "CoholdersProspectionAttemptsFeignService.java",
+          "url": "bpmo.incluir.cotitular.java.url"
+        }
+      ],
+      "bootstrap": "mcsv-corp; mcsv-integration; acpf-integration; atcl-integration; cnio-corp; cnio-integration; bpmo-integration"
+    },
+    "mcsv-interno-atividades-bpmo-java": {
+      "feign": [
+        {
+          "file": "TaskBPMFeignService.java",
+          "url": "original.url.rest.bpm.task.url.base"
+        },
+        {
+          "file": "TaskNativeBPMFeignService.java",
+          "url": "original.url.rest.bpm.url.base"
+        }
+      ],
+      "bootstrap": "acpf-integration;mcsv-integration;atcl-integration;cnio-corp",
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "original.url.rest.bpm.url.base",
+            "url_text": "d.processos.original.corp/rest/bpm/wle"
+          },
+          {
+            "variable_name": "original.url.rest.bpm.task.url.base",
+            "url_text": "bcohmswrk11:8298/bpmo-atividades-java"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "original.url.rest.bpm.url.base",
+            "url_text": "h.processos.original.corp/rest/bpm/wle"
+          },
+          {
+            "variable_name": "original.url.rest.bpm.task.url.base",
+            "url_text": "bcohmswrk11:8298/bpmo-atividades-java"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "original.url.rest.bpm.url.base",
+            "url_text": "processospj.original.corp/rest/bpm/wle"
+          },
+          {
+            "variable_name": "original.url.rest.bpm.task.url.base",
+            "url_text": "vsmscorporativo11:8298/bpmo-atividades-java"
+          }
+        ]
+      }
+    }
+  },
+  "gedc": {
+    "gedc-gedcontrollerservices-java": {},
+    "gedc-gedcontrollerminutaria-java": {}
+  },
+  "pvfr": {},
+  "pvld": {
+    "mcsv-relatorio-visitas-pvld-java": {
+      "feign": [
+        {
+          "file": "RelatorioVisitaFeign.java",
+          "url": "original.url.relatorio.visitas"
+        }
+      ],
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "original.url.relatorio.visitas",
+            "url_text": "pvld-relatorio-visitas-java.apps.ocp-d.original.com.br"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "original.url.relatorio.visitas",
+            "url_text": "pvld-relatorio-visitas-java.apps.ocp-h.original.com.br"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "original.url.relatorio.visitas",
+            "url_text": "pvld-relatorio-visitas-java.original.com.br"
+          }
+        ]
+      }
+    }
+  },
+  "aant": {},
+  "bimo": {},
+  "cess": {
+    "ctas-migracao-processa-saldo-java": {
+      "bootstrap": "ctas-corp; ctas-integration; original-legacy; fwcl-corp"
+    },
+    "mcsv-interno-consulta-cessao-credito-java": {
+      "feign": [
+        {
+          "file": "CreditInstalmentFeign.java",
+          "url": "cess.consulta.transacoes.java.url"
+        }
+      ],
+      "bootstrap": "mcsv-integration; cess-integration; cnio-corp; acpf-integration; mcsv-integration; atcl-integration"
+    },
+    "pgto-processamento-arquivo-remessa-batch-java": {},
+    "ctas-reprocessamento-lancamentos-efetivar-batch-java": {},
+    "mcsv-liveness-acesso-digital-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "liveness.integracao.server.url",
+            "url_text": "bcodmswrk01:8329/reip-integracao-acesso-java/v1"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "liveness.integracao.server.url",
+            "url_text": "reip-integracao-acesso-java.reip-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "br.com.original.token.authentication.url",
+            "url_text": "atco-auth-sistemas-java.atco-hml.svc.cluster.local:8080/v1/token"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "liveness.integracao.server.url",
+            "url_text": "reip-integracao-acesso-java.reip.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "br.com.original.token.authentication.url",
+            "url_text": "atco-auth-sistemas-java.atco.svc.cluster.local:8080/v1/token"
+          }
+        ]
+      }
+    },
+    "pgto-reprocessamento-baixa-boletos-batch-java": {},
+    "rtto-process-agreement-massive-batch-java": {},
+    "mcsv-pagamentos-pix-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "aspa.service.url",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com:2049/aspa-configuracao-psti-java/v1/parameter/filter"
+          },
+          {
+            "variable_name": "orquestrador.payment",
+            "url_text": "pgto-transferencias-bacen-java.pgto-dev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "orquestrador.payment-novo",
+            "url_text": "pgto-transferencia-pix-java.pgto-dev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "microservice.qrcode",
+            "url_text": "pgto-qr-code-java.pgto-dev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "aspa.service.url",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com:2049/aspa-configuracao-psti-java/v1/parameter/filter"
+          },
+          {
+            "variable_name": "microservice.balance",
+            "url_text": "ctas-saldo-java.ctas-dev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "microservice.status",
+            "url_text": "pgto-status-pagamentos-java.pgto-dev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "microservice.receipt",
+            "url_text": "pgto-comprovantes-pagamentos-java.pgto-dev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "microservice.last_transfers",
+            "url_text": "intp-comprovantes-pagamentos-java.intp-dev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "microservice.transaction.limit",
+            "url_text": "pgto-transferencias-bacen-java.pgto-dev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "microservice.transaction.limit3",
+            "url_text": "lipe-transacoes-java.lipe-dev.svc.cluster.local:8080"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "aspa.service.url",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com:2049/aspa-configuracao-psti-java/v1/parameter/filter"
+          },
+          {
+            "variable_name": "orquestrador.payment",
+            "url_text": "pgto-transferencias-bacen-java.pgto-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "orquestrador.payment-novo",
+            "url_text": "pgto-transferencia-pix-java.pgto-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "aspa.service.url",
+            "url_text": "NLB-homolog-c4196743f986d386.elb.sa-east-1.amazonaws.com:2049/aspa-configuracao-psti-java/v1/parameter/filter"
+          },
+          {
+            "variable_name": "microservice.qrcode",
+            "url_text": "pgto-qr-code-java.pgto-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "microservice.balance",
+            "url_text": "ctas-saldo-java.ctas-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "microservice.status",
+            "url_text": "pgto-status-pagamentos-java.pgto-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "microservice.receipt",
+            "url_text": "pgto-comprovantes-pagamentos-java.pgto-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "microservice.last_transfers",
+            "url_text": "intp-comprovantes-pagamentos-java.intp-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "microservice.transaction.limit",
+            "url_text": "pgto-transferencias-bacen-java.pgto-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "microservice.transaction.limit3",
+            "url_text": "lipe-transacoes-java.lipe-hml.svc.cluster.local:8080"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "aspa.service.url",
+            "url_text": "NLB-production-d2f4ae9c4ba4e07b.elb.sa-east-1.amazonaws.com:2049/aspa-configuracao-psti-java/v1/parameter/filter"
+          },
+          {
+            "variable_name": "orquestrador.payment",
+            "url_text": "pgto-transferencias-bacen-java.pgto.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "orquestrador.payment-novo",
+            "url_text": "pgto-transferencia-pix-java.pgto.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "microservice.qrcode",
+            "url_text": "pgto-qr-code-java.pgto.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "aspa.service.url",
+            "url_text": "NLB-production-d2f4ae9c4ba4e07b.elb.sa-east-1.amazonaws.com:2049/aspa-configuracao-psti-java/v1/parameter/filter"
+          },
+          {
+            "variable_name": "microservice.balance",
+            "url_text": "ctas-saldo-java.ctas.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "microservice.status",
+            "url_text": "pgto-status-pagamentos-java.pgto.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "microservice.receipt",
+            "url_text": "pgto-comprovantes-pagamentos-java.pgto.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "microservice.last_transfers",
+            "url_text": "intp-comprovantes-pagamentos-java.intp.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "microservice.transaction.limit",
+            "url_text": "pgto-transferencias-bacen-java.pgto.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "microservice.transaction.limit3",
+            "url_text": "lipe-transacoes-java.lipe.svc.cluster.local:8080"
+          }
+        ]
+      }
+    },
+    "ctas-accounts-to-process-agreement-batch-java": {}
+  },
+  "crgr": {},
+  "crmd": {},
+  "epat": {},
+  "fdos": {},
+  "gagc": {},
+  "glcr": {},
+  "glpf": {},
+  "glpj": {},
+  "intr": {
+    "intr-permissao-optin-java": {
+      "bootstrap": "intr-integration; intr-corp"
+    }
+  },
+  "inve": {
+    "mcsv-carteira-investimentos-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "feign.url.inve.produtos",
+            "url_text": "inve-produtos-java.inve-dev.svc.cluster.local:8080/v1"
+          },
+          {
+            "variable_name": "feign.url.inve.classificacao",
+            "url_text": "inve-classificacao-clientes-java.inve-dev.svc.cluster.local:8080/v1"
+          },
+          {
+            "variable_name": "feign.url.invo.rentabilidade",
+            "url_text": "invo-rentabilidade-java.invo-dev.svc.cluster.local:8080/v1"
+          },
+          {
+            "variable_name": "feign.url.fdo.consult",
+            "url_text": "fdos-consulta-investimentos-java.fdos-dev.svc.cluster.local:8080/v1"
+          },
+          {
+            "variable_name": "feign.url.tsbo.produtos",
+            "url_text": "bcodmswrkctn01:8232/tsbo-products-java/v1"
+          },
+          {
+            "variable_name": "feign.fdos.url",
+            "url_text": "fdos-investimentos-java.fdos-dev.svc.cluster.local:8080/v1"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "feign.url.inve.produtos",
+            "url_text": "inve-produtos-java.inve-hml.svc.cluster.local:8080/v1"
+          },
+          {
+            "variable_name": "feign.url.inve.classificacao",
+            "url_text": "inve-classificacao-clientes-java.inve-hml.svc.cluster.local:8080/v1"
+          },
+          {
+            "variable_name": "feign.url.invo.rentabilidade",
+            "url_text": "invo-rentabilidade-java.invo-hml.svc.cluster.local:8080/v1"
+          },
+          {
+            "variable_name": "feign.url.fdo.consult",
+            "url_text": "fdos-consulta-investimentos-java.fdos-hml.svc.cluster.local:8080/v1"
+          },
+          {
+            "variable_name": "feign.url.tsbo.produtos",
+            "url_text": "vshmsctnprodutos:8232/tsbo-products-java/v1"
+          },
+          {
+            "variable_name": "feign.fdos.url",
+            "url_text": "fdos-investimentos-java.fdos-hml.svc.cluster.local:8080/v1"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "feign.url.inve.produtos",
+            "url_text": "inve-produtos-java.inve.svc.cluster.local:8080/v1"
+          },
+          {
+            "variable_name": "feign.url.inve.classificacao",
+            "url_text": "inve-classificacao-clientes-java.inve.svc.cluster.local:8080/v1"
+          },
+          {
+            "variable_name": "feign.url.invo.rentabilidade",
+            "url_text": "invo-rentabilidade-java.invo.svc.cluster.local:8080/v1"
+          },
+          {
+            "variable_name": "feign.url.fdo.consult",
+            "url_text": "fdos-consulta-investimentos-java.fdos.svc.cluster.local:8080/v1"
+          },
+          {
+            "variable_name": "feign.url.tsbo.produtos",
+            "url_text": "vsmsctnprodutos.bcocorporate.ad:8232/tsbo-products-java/v1"
+          },
+          {
+            "variable_name": "feign.fdos.url",
+            "url_text": "fdos-investimentos-java.fdos.svc.cluster.local:8080/v1"
+          }
+        ],
+        "application.properties": [
+          {
+            "variable_name": "feign.url.inve.produtos",
+            "url_text": "inve-produtos-java.apps.ocp-h.original.com.br/v1"
+          },
+          {
+            "variable_name": "feign.url.inve.classificacao",
+            "url_text": "inve-classificacao-clientes-java.apps.ocp-h.original.com.br/v1"
+          },
+          {
+            "variable_name": "feign.url.invo.rentabilidade",
+            "url_text": "bcodmswrkctn01:8893/invo-rentabilidade-java/v1"
+          },
+          {
+            "variable_name": "feign.url.fdo.consult",
+            "url_text": "fdos-consulta-investimentos-java.apps.ocp-h.original.com.br/v1"
+          },
+          {
+            "variable_name": "feign.url.tsbo.produtos",
+            "url_text": "vshmsctnprodutos:8232/tsbo-products-java/v1"
+          },
+          {
+            "variable_name": "feign.fdos.url",
+            "url_text": "fdos-investimentos-java.fdos-dev.svc.cluster.local:8080/v1"
+          }
+        ]
+      }
+    },
+    "mcsv-informacoes-investidor-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "feign.url.suitability",
+            "url_text": "inve-suitability-java.inve-dev.svc.cluster.local:8080/v1"
+          },
+          {
+            "variable_name": "feign.url.fdos.consulta",
+            "url_text": "fdos-consulta-investimentos-java.fdos-dev.svc.cluster.local:8080/v1"
+          },
+          {
+            "variable_name": "feign.url.inve.produtos",
+            "url_text": "inve-produtos-java.inve-dev.svc.cluster.local:8080/v1"
+          },
+          {
+            "variable_name": "feign.url.inve.classificacao",
+            "url_text": "inve-classificacao-clientes-java.inve-dev.svc.cluster.local:8080/v1"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "feign.url.suitability",
+            "url_text": "inve-suitability-java.inve-hml.svc.cluster.local:8080/v1"
+          },
+          {
+            "variable_name": "feign.url.fdos.consulta",
+            "url_text": "fdos-consulta-investimentos-java.fdos-hml.svc.cluster.local:8080/v1"
+          },
+          {
+            "variable_name": "feign.url.inve.produtos",
+            "url_text": "inve-produtos-java.inve-hml.svc.cluster.local:8080/v1"
+          },
+          {
+            "variable_name": "feign.url.inve.classificacao",
+            "url_text": "inve-classificacao-clientes-java.inve-hml.svc.cluster.local:8080/v1"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "feign.url.suitability",
+            "url_text": "inve-suitability-java.inve.svc.cluster.local:8080/v1"
+          },
+          {
+            "variable_name": "feign.url.fdos.consulta",
+            "url_text": "fdos-consulta-investimentos-java.fdos.svc.cluster.local:8080/v1"
+          },
+          {
+            "variable_name": "feign.url.inve.produtos",
+            "url_text": "inve-produtos-java.inve.svc.cluster.local:8080/v1"
+          },
+          {
+            "variable_name": "feign.url.inve.classificacao",
+            "url_text": "inve-classificacao-clientes-java.inve.svc.cluster.local:8080/v1"
+          }
+        ],
+        "application.properties": [
+          {
+            "variable_name": "feign.url.suitability",
+            "url_text": "inve-suitability-java.apps.ocp-h.original.com.br/v1"
+          },
+          {
+            "variable_name": "feign.url.fdos.consulta",
+            "url_text": "fdos-consulta-investimentos-java.apps.ocp-h.original.com.br/v1"
+          },
+          {
+            "variable_name": "feign.url.inve.classificacao",
+            "url_text": "inve-classificacao-clientes-java.apps.ocp-h.original.com.br/v1"
+          },
+          {
+            "variable_name": "feign.url.inve.produtos",
+            "url_text": "inve-produtos-java.apps.ocp-h.original.com.br/v1"
+          }
+        ]
+      }
+    },
+    "mcsv-renovacao-automatica-investimentos-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "feign.url.fixedIncomeProdSim",
+            "url_text": "bcodmswrkctn01:8232/tsbo-products-java/v1"
+          },
+          {
+            "variable_name": "feign.url.fixedIncome",
+            "url_text": "bcodmswrkctn01.bcocorporate.ad:8190/tsbo/investments/v1"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "feign.url.fixedIncomeProdSim",
+            "url_text": "bcohmswrkctn01:8232/tsbo-products-java/v1"
+          },
+          {
+            "variable_name": "feign.url.fixedIncome",
+            "url_text": "bcohmswrkctn01:8190/tsbo/investments/v1"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "feign.url.fixedIncomeProdSim",
+            "url_text": "vsmsctnprodutos.bcocorporate.ad:8232/tsbo-products-java/v1"
+          },
+          {
+            "variable_name": "feign.url.fixedIncome",
+            "url_text": "vsmsctnprodutos.bcocorporate.ad:8190/tsbo/investments/v1"
+          }
+        ]
+      }
+    },
+    "mcsv-interno-investimentos-java": {
+      "feign": [
+        {
+          "file": "CustomerInvestmentFeignService.java",
+          "url": "inve.suitability.java.url"
+        },
+        {
+          "file": "FixedIncomeFeingService.java",
+          "url": "inve.produtos.java.url"
+        },
+        {
+          "file": "FixedIncomeV2FeingService.java",
+          "url": "tsbo.consulta.investimentos.java.url"
+        },
+        {
+          "file": "FundsFeingService.java",
+          "url": "fdos.consulta.investimentos.java.url"
+        }
+      ],
+      "bootstrap": "mcsv-corp; mcsv-integration; original-legacy; acpf-integration; atcl-integration; cnio-corp; fdos-integration; inve-integration; tsbo-integration"
+    },
+    "mcsv-investimentos-fundos-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "feign.url.funds.terms",
+            "url_text": "bcodmswrkctn01:8549/fdos-termos-java/v1"
+          },
+          {
+            "variable_name": "feign.url.funds",
+            "url_text": "bcodmswrkctn01:8249/fdos-consulta-investimentos-java/v1"
+          },
+          {
+            "variable_name": "feign.cpds.url",
+            "url_text": "bcodmswrkctn01:8548/cdps-operacoes-clientes-java/v1"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "feign.url.funds",
+            "url_text": "fdos-consulta-investimentos-java.apps.ocp-h.original.com.br/v1"
+          },
+          {
+            "variable_name": "feign.url.funds.terms",
+            "url_text": "vshmsctnprodutos.bcocorporate.ad:8549/fdos-termos-java/v1"
+          },
+          {
+            "variable_name": "feign.cpds.url",
+            "url_text": "vshmsctnprodutos:8548/cdps-operacoes-clientes-java/v1"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "feign.url.funds",
+            "url_text": "fdos-consulta-investimentos-java.original.com.br/v1"
+          },
+          {
+            "variable_name": "feign.url.funds.terms",
+            "url_text": "vsmsctnprodutos.bcocorporate.ad:8549/fdos-termos-java/v1"
+          },
+          {
+            "variable_name": "feign.cpds.url",
+            "url_text": "vsmsctnprodutos.bcocorporate.ad:8548/cdps-operacoes-clientes-java/v1"
+          }
+        ],
+        "application.properties": [
+          {
+            "variable_name": "feign.url.funds",
+            "url_text": "fdos-consulta-investimentos-java.apps.ocp-h.original.com.br/v1"
+          },
+          {
+            "variable_name": "feign.url.funds.terms",
+            "url_text": "vshmsctnprodutos.bcocorporate.ad:8549/fdos-termos-java/v1"
+          },
+          {
+            "variable_name": "feign.cpds.url",
+            "url_text": "vshmsctnprodutos:8548/cdps-operacoes-clientes-java/v1"
+          }
+        ]
+      }
+    },
+    "mcsv-pj-investimentos-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "feign.url.contaRende",
+            "url_text": "vshmsctnprodutos.bcocorporate.ad:8189/apat/yielding-accounts/v1"
+          },
+          {
+            "variable_name": "feign.url.extrato",
+            "url_text": "vshmsctnprodutos.bcocorporate.ad:8132/apat-extrato-mensal-java/v1"
+          },
+          {
+            "variable_name": "feign.url.investments",
+            "url_text": "inve-produtos-java.apps.ocp-d.original.com.br/v1"
+          },
+          {
+            "variable_name": "feign.url.fixedIncome",
+            "url_text": "tsbo-consulta-investimentos-java.apps.ocp-d.original.com.br"
+          },
+          {
+            "variable_name": "feign.url.fixedIncomeProdSim",
+            "url_text": "vshmsctnprodutos:8232/tsbo-products-java/v1"
+          },
+          {
+            "variable_name": "feign.url.fixedIncomeProdSimV2",
+            "url_text": "vshmsctnprodutos:8232/tsbo-products-java/v2"
+          },
+          {
+            "variable_name": "feign.url.extract",
+            "url_text": "tsbo-extrato-mensal-java.apps.ocp-d.original.com.br"
+          },
+          {
+            "variable_name": "feign.url.extractFdos",
+            "url_text": "vshmsctnprodutos:8134/fdos/monthly-statements"
+          },
+          {
+            "variable_name": "feign.url.extractStatus",
+            "url_text": "vshmsctnprodutos.bcocorporate.ad:8248/inve-extrato-mensal/v1"
+          },
+          {
+            "variable_name": "feign.url.suitability",
+            "url_text": "inve-suitability-java.apps.ocp-d.original.com.br/v1"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "feign.url.contaRende",
+            "url_text": "vshmsctnprodutos.bcocorporate.ad:8189/apat/yielding-accounts"
+          },
+          {
+            "variable_name": "feign.url.extrato",
+            "url_text": "vshmsctnprodutos.bcocorporate.ad:8132/apat-extrato-mensal-java/v1"
+          },
+          {
+            "variable_name": "feign.url.investments",
+            "url_text": "inve-produtos-java.apps.ocp-h.original.com.br/v1"
+          },
+          {
+            "variable_name": "feign.url.fixedIncome",
+            "url_text": "tsbo-consulta-investimentos-java.apps.ocp-h.original.com.br"
+          },
+          {
+            "variable_name": "feign.url.fixedIncomeProdSim",
+            "url_text": "vshmsctnprodutos:8232/tsbo-products-java/v1"
+          },
+          {
+            "variable_name": "feign.url.fixedIncomeProdSimV2",
+            "url_text": "vshmsctnprodutos:8232/tsbo-products-java/v2"
+          },
+          {
+            "variable_name": "feign.url.extract",
+            "url_text": "tsbo-extrato-mensal-java.apps.ocp-h.original.com.br"
+          },
+          {
+            "variable_name": "feign.url.extractFdos",
+            "url_text": "vshmsctnprodutos:8134/fdos/monthly-statements"
+          },
+          {
+            "variable_name": "feign.url.extractStatus",
+            "url_text": "vshmsctnprodutos.bcocorporate.ad:8248/inve-extrato-mensal/v1"
+          },
+          {
+            "variable_name": "feign.url.suitability",
+            "url_text": "inve-suitability-java.apps.ocp-h.original.com.br/v1"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "feign.url.contaRende",
+            "url_text": "vsmsctnprodutos.bcocorporate.ad:8189/apat/yielding-accounts"
+          },
+          {
+            "variable_name": "feign.url.extrato",
+            "url_text": "vsmsctnprodutos.bcocorporate.ad:8132/apat-extrato-mensal-java/v1"
+          },
+          {
+            "variable_name": "feign.url.investments",
+            "url_text": "inve-produtos-java.original.com.br/v1"
+          },
+          {
+            "variable_name": "feign.url.fixedIncome",
+            "url_text": "tsbo-consulta-investimentos-java.original.com.br"
+          },
+          {
+            "variable_name": "feign.url.fixedIncomeProdSim",
+            "url_text": "vsmsctnprodutos:8232/tsbo-products-java/v1"
+          },
+          {
+            "variable_name": "feign.url.fixedIncomeProdSimV2",
+            "url_text": "vsmsctnprodutos:8232/tsbo-products-java/v2"
+          },
+          {
+            "variable_name": "feign.url.extract",
+            "url_text": "tsbo-extrato-mensal-java.original.com.br"
+          },
+          {
+            "variable_name": "feign.url.extractFdos",
+            "url_text": "vsmsctnprodutos:8134/fdos/monthly-statements"
+          },
+          {
+            "variable_name": "feign.url.extractStatus",
+            "url_text": "vsmsctnprodutos:8248/inve-extrato-mensal/v1"
+          },
+          {
+            "variable_name": "feign.url.suitability",
+            "url_text": "inve-suitability-java.original.com.br/v1"
+          }
+        ]
+      }
+    }
+  },
+  "invo": {},
+  "mbio": {},
+  "prev": {
+    "mcsv-resgate-previdencia-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "feign.prev.resgate.url",
+            "url_text": "prev-resgate-java.prev-dev.svc.cluster.local:8080"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "feign.prev.resgate.url",
+            "url_text": "prev-resgate-java.prev-hml.svc.cluster.local:8080"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "feign.prev.resgate.url",
+            "url_text": "prev-resgate-java.prev.svc.cluster.local:8080"
+          }
+        ],
+        "application.properties": [
+          {
+            "variable_name": "feign.prev.resgate.url",
+            "url_text": "prev-resgate-java.apps.ocp-h.original.com.br"
+          }
+        ]
+      }
+    },
+    "mcsv-portabilidade-previdencia-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "feign.prev.portabilidade.url",
+            "url_text": "prev-portabilidade-java.prev-dev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "feign.prev.consulta.url",
+            "url_text": "prev-consulta-java.prev-dev.svc.cluster.local:8080"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "feign.prev.portabilidade.url",
+            "url_text": "prev-portabilidade-java.prev-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "feign.prev.consulta.url",
+            "url_text": "prev-consulta-java.prev-hml.svc.cluster.local:8080"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "feign.prev.portabilidade.url",
+            "url_text": "prev-portabilidade-java.prev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "feign.prev.consulta.url",
+            "url_text": "prev-consulta-java.prev.svc.cluster.local:8080"
+          }
+        ]
+      }
+    },
+    "pgto-notificacao-previa-agendamentos-pix-batch-java": {},
+    "mcsv-contratacao-previdencia-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "feign.prev.url",
+            "url_text": "prev-contratacao-java.prev-dev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "feign.prev.consulta.url",
+            "url_text": "prev-consulta-java.prev-dev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "feign.inve.url",
+            "url_text": "inve-previdencia-java.inve-dev.svc.cluster.local:8080"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "feign.prev.url",
+            "url_text": "prev-contratacao-java.prev-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "feign.prev.consulta.url",
+            "url_text": "prev-consulta-java.prev-hml.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "feign.inve.url",
+            "url_text": "inve-previdencia-java.inve-hml.svc.cluster.local:8080"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "feign.prev.url",
+            "url_text": "prev-contratacao-java.prev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "feign.prev.consulta.url",
+            "url_text": "prev-consulta-java.prev.svc.cluster.local:8080"
+          },
+          {
+            "variable_name": "feign.inve.url",
+            "url_text": "inve-previdencia-java.inve.svc.cluster.local:8080"
+          }
+        ],
+        "application.properties": [
+          {
+            "variable_name": "feign.prev.url",
+            "url_text": "localhost:8080/v1"
+          },
+          {
+            "variable_name": "feign.prev.consulta.url",
+            "url_text": "prev-consulta-java.apps.ocp-h.original.com.br/v1"
+          },
+          {
+            "variable_name": "feign.inve.url",
+            "url_text": "inve-previdencia-java.apps.ocp-h.original.com.br/v1"
+          }
+        ]
+      }
+    },
+    "mcsv-interno-previdencia-java": {
+      "application": {
+        "application-dev.properties": [
+          {
+            "variable_name": "zuul.routes.main.url",
+            "url_text": "prev-cmm-rest-java.prev-dev.svc.cluster.local:8080"
+          }
+        ],
+        "application-hml.properties": [
+          {
+            "variable_name": "zuul.routes.main.url",
+            "url_text": "prev-cmm-rest-java.prev-hml.svc.cluster.local:8080"
+          }
+        ],
+        "application-prd.properties": [
+          {
+            "variable_name": "zuul.routes.main.url",
+            "url_text": "prev-cmm-rest-java.prev.svc.cluster.local:8080"
+          }
+        ]
+      }
+    }
+  },
+  "tsbo": {}
+}
