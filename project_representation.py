@@ -1,8 +1,5 @@
 import json
-from resources import (
-  fernanda_acronyns,
-  other_projects_acronym
-)
+from resources import fernanda_acronyns
 
 def load_file(file_path):
   with open(file_path, 'r') as f:
@@ -82,7 +79,6 @@ def add_entry(representation, acronym, project):
 
 def main():
   fernanda_projects = load_file('files/fernanda_projects_dictionary.json')
-  other_projects_dictionary = load_file('files/other_projects_dictionary.json')
   projects = load_file('files/acronym_dictionary.json')
 
   representation = {}

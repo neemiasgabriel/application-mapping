@@ -10,12 +10,10 @@ load_dotenv()
 
 class GitlabOps:
   def __init__(self):
-    session = requests.Session()
-
     self.gl = gitlab.Gitlab(
       url='https://git.original.com.br',
       private_token=os.getenv('GITLAB_TOKEN_COLLINS'),
-      session=session)
+      session=requests.Session())
 
   def get_project(self, project_name):
     return self.gl.projects.get(project_name, all=True)
