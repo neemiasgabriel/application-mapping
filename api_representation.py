@@ -150,6 +150,13 @@ def load_acronym_dictionary():
     except json.decoder.JSONDecodeError:
       return None
 
+"""
+Gera um dicionário representando todas as informações dos projetos de uma determinada sigla, que não está sob o guarda-chuva
+das siglas da Fernanda.
+
+O dicionário gerado é utilizado no project_representation para gerar a representação pedida pela Fernanda.
+Um exemplo do arquivo gerado pode ser encontrado em files/acronym_dictionary.json
+"""
 def build_representation(api, acronym, dictionary):
   project_list = api.projects.list(search=acronym, all=True)
 

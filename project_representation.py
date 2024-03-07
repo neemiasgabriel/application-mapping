@@ -84,6 +84,10 @@ def generate_representation(representation, application_urls, fernanda_projects,
       else:
         append_application_files_to_representation(representation, fernanda_acronym, projects_name_list, application, project)
 
+"""
+Gera um dicionário com a representação de todos os projetos que acessam os projetos da Fernanda.
+Um exemplo da representação pode ser encontrada em files/representation.json
+"""
 def main():
   fernanda_projects = load_file('files/fernanda_projects_dictionary.json')
   projects = load_file('files/acronym_dictionary.json')
