@@ -160,10 +160,10 @@ def build_representation(api, acronym, dictionary) -> dict:
 
   return dictionary
 
-def build_api_representation(api) -> dict:
+def build_api_representation(api, projects_acronym) -> dict:
   dictionary = {}
 
-  for acronym in other_projects_acronym:
+  for acronym in projects_acronym:
     dictionary = build_representation(api=api, acronym=acronym, dictionary=dictionary)
 
   return dictionary
@@ -173,6 +173,6 @@ Test local output
 """
 if __name__ == '__main__':
   gl = gitlab_api()
-  acronym_dictionary = build_api_representation(gl)
+  acronym_dictionary = build_api_representation(gl, other_projects_acronym)
 
   save_dictionary(acronym_dictionary, 'acronym_dictionary')

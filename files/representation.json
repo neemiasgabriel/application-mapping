@@ -1,14 +1,14 @@
 {
   "cdps": {
-    "cdps-consultar-informacoes-cliente-java": [
-      "mcsv-converter-informacoes-cliente-java",
-      "pgto-transferencias-java",
-      "pgto-folha-pagamento-java",
-      "mcsv-convenio-guarda-chuva-java"
-    ],
     "cdps-operacoes-clientes-java": [
       "mcsv-converter-informacoes-cliente-java",
       "mcsv-investimentos-fundos-java"
+    ],
+    "cdps-consultar-informacoes-cliente-java": [
+      "mcsv-converter-informacoes-cliente-java",
+      "pgto-folha-pagamento-java",
+      "mcsv-convenio-guarda-chuva-java",
+      "pgto-transferencias-java"
     ],
     "cdps-sincronizacao-tabelas-java": [
       "pgto-consumidor-tabelas-sincronizacao-batch-java"
@@ -17,22 +17,22 @@
   "ctas": {
     "ctas-efetivar-credito-java": [
       "pgto-transferencias-bacen-java",
-      "pgto-transferencias-java",
       "pgto-cancela-baixa-titulos-pagfor-java",
+      "pgto-transferencia-pix-java",
       "pgto-produtor-transacoes-pix-varejo-java",
-      "pgto-transferencia-pix-java"
+      "pgto-transferencias-java"
     ],
     "ctas-efetivar-debito-java": [
-      "pgto-transferencias-java",
-      "pgto-transferencias-bacen-java",
+      "pgto-produtor-transacoes-pix-varejo-java",
       "pgto-transferencia-pix-java",
-      "pgto-produtor-transacoes-pix-varejo-java"
+      "pgto-transferencias-bacen-java",
+      "pgto-transferencias-java"
     ],
     "ctas-saldo-java": [
-      "pgto-transferencias-java",
-      "pgto-consumidor-agendamentos-pix-java",
       "pgto-transferencias-bacen-java",
-      "mcsv-pagamentos-pix-java"
+      "pgto-consumidor-agendamentos-pix-java",
+      "mcsv-pagamentos-pix-java",
+      "pgto-transferencias-java"
     ],
     "ctas-sincronizacao-tabelas-java": [
       "pgto-consumidor-tabelas-sincronizacao-batch-java"
@@ -60,8 +60,8 @@
   "parc": {
     "parc-informacoes-cadastro-java": [
       "pgto-filtrar-tef-parcerias-java",
-      "pgto-filtrar-ted-parcerias-java",
-      "pgto-notificacao-parceiro-java"
+      "pgto-notificacao-parceiro-java",
+      "pgto-filtrar-ted-parcerias-java"
     ]
   },
   "acad": {
