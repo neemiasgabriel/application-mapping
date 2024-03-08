@@ -9,9 +9,10 @@ from resources import fernanda_acronyns
 load_dotenv()
 
 
-def search_project_names_by_acronyns(gl, acronym_list) -> dict:
+def search_project_names_by_acronyms(gl, acronym_list) -> dict:
   """
   Obtém todos os arquivos de integração a partir da lista de siglas e retorna um dicionário com os nomes dos projetos
+  separados por sigla.
 
   :param gl: objeto de acesso à api
   :param acronym_list: lista de siglas que devem ser pesquisadas
@@ -64,7 +65,7 @@ def search_project_names_by_acronyns(gl, acronym_list) -> dict:
   return dictionary
 
 if __name__ == '__main__':
-  dictionary = search_project_names_by_acronyns(gitlab_api(), fernanda_acronyns)
+  dictionary = search_project_names_by_acronyms(gitlab_api(), fernanda_acronyns)
 
   with open('../files/fwms_dictionary.json', 'w+') as f:
     try:

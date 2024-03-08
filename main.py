@@ -1,5 +1,5 @@
 from gitlab_ops import gitlab_api
-from mappings.fwms_mapping import search_project_names_by_acronyns
+from mappings.fwms_mapping import search_project_names_by_acronyms
 from project_representation import build_graph_representation
 from api_representation import build_api_representation
 
@@ -12,7 +12,7 @@ def main():
   gl = gitlab_api()
 
   # Busca pelos projetos a partir do fwms, onde os projetos estão externalizados
-  fwms_mapping = search_project_names_by_acronyns(gl, fernanda_acronyns)
+  fwms_mapping = search_project_names_by_acronyms(gl, fernanda_acronyns)
 
   # Busca por todos os projetos que podem ser acessados a partir do token e que não estão nas siglas da Fernanda
   api_mapping = build_api_representation(gl)
