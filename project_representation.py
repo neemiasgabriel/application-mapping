@@ -84,11 +84,22 @@ def generate_representation(representation, application_urls, fernanda_projects,
       else:
         append_application_files_to_representation(representation, fernanda_acronym, projects_name_list, application, project)
 
-"""
-Gera um dicionário com a representação de todos os projetos que acessam os projetos da Fernanda.
-Um exemplo da representação pode ser encontrada em files/representation.json
-"""
 def main():
+  """
+  Gera um dicionário com a representação de todos os projetos que acessam os projetos da Fernanda.
+
+  A função funciona da seguinte forma
+  1. Carrega os dicionários dos projetos da Fernanda e os projetos da API.
+  2. Itera em cada sigla de projeto nos projetos da API. (Projetos que não são da Fernanda)
+  3. Itera em cada projeto sob a sigla.
+  4. Recupera as nomes de projeto que estão no Feign
+    4.1 Adiciona os nomes de projeto que acessam os projetos da Fernanda
+  5. Obtém as URLs dos arquivos de application (dev, hml, prd e properties)
+    5.1 Gera um conjunto para que não hajam URLs repetidas na hora de gerar a representação
+  6. Adiciona os projetos, encontrados nos arquivos, dentro da representação.
+  7. O último loop remove os projetos duplicados, de cada sigla, e salva o dicionário em files/representation.json
+  :return:
+  """
   fernanda_projects = load_file('files/fernanda_projects_dictionary.json')
   projects = load_file('files/acronym_dictionary.json')
 

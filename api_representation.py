@@ -150,14 +150,34 @@ def load_acronym_dictionary():
     except json.decoder.JSONDecodeError:
       return None
 
-"""
-Gera um dicionário representando todas as informações dos projetos de uma determinada sigla, que não está sob o guarda-chuva
-das siglas da Fernanda.
+def build_representation(api, acronym, dictionary) -> dict:
+  """
+  A função constroi a representação de um projeto, baseado na sigla passada como parâmetro.
 
-O dicionário gerado é utilizado no project_representation para gerar a representação pedida pela Fernanda.
-Um exemplo do arquivo gerado pode ser encontrado em files/acronym_dictionary.json
-"""
-def build_representation(api, acronym, dictionary):
+  Parâmetros:
+  :param api: Uma instância da API do Gitlab
+  :param acronym: A sigla do projeto
+  :param dictionary: O dicionário onde será armazenado a representação do projeto
+  :return: O dicionário atualizado com a representação do projeto
+
+  A função funciona da seguinte forma
+
+  A função funciona da seguinte forma:
+    1. Lista todos os projetos na API GitLab que correspondem à sigla fornecida.
+    2. Se a sigla ainda não for uma chave no dicionário, ela é adicionada, no mesmo, com um objeto vazio.
+    3. Itera em cada projeto na lista de projetos.
+        - Se o nome do projeto não terminar com '-java', ele pula para o próximo projeto.
+        - Recupera os arquivos do repositório do projeto.
+        - Se não houver arquivos no repositório, passa para o próximo projeto.
+        - Se o nome do projeto ainda não for uma chave no dicionário sob a sigla, ele é adicionado no dicionário com um objeto vazio.
+        - Filtra os arquivos do repositório com base em feign_folder_regex e adiciona o resultado ao dicionário sob o nome do projeto com 'feign' como chave.
+        - Filtra os arquivos do repositório para 'bootstrap.yml' e adiciona o resultado ao dicionário sob o nome do projeto com 'bootstrap' como chave.
+        - Filtra os arquivos do repositório com base em application_properties_files e adiciona o resultado ao dicionário sob o nome do projeto com 'application' como chave.
+    4. Retorna o dicionário atualizado.
+
+  O dicionário gerado é utilizado no project_representation para gerar a representação pedida pela Fernanda.
+  Um exemplo do arquivo gerado pode ser encontrado em files/acronym_dictionary.json
+  """
   project_list = api.projects.list(search=acronym, all=True)
 
   if dictionary.get(acronym) is None:
