@@ -1,0 +1,758 @@
+{
+  "acad": [
+    {
+      "project_name": "acad.consultar.informacoes.java.url",
+      "url": "acad-consultar-informacoes-java.acad.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "acad.apoio.cadastro.url",
+      "url": "vsacadprdback:5052"
+    },
+    {
+      "project_name": "acad.consultas.dominios.java.url",
+      "url": "acad-consultas-dominios-java.acad.svc.cluster.local:8080"
+    }
+  ],
+  "apio": [
+    {
+      "project_name": "apio.canal.abertura.cadastro.java.url",
+      "url": "apio-canal-abertura-cadastro-java.apio.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "apio.canal.cartao.pre.pago.virtual.java.url",
+      "url": "apio-canal-cartao-pre-pago-virtual-java.apio.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "apio.canal.consultar.contratos.emprestimos.java.url",
+      "url": "apio-canal-consultar-contratos-emprestimos-java.apio.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "apio.solicitacao.cartao.java.url",
+      "url": "apio-solicitacao-cartao-java.apio.svc.cluster.local:8080"
+    }
+  ],
+  "atmo": [
+    {
+      "project_name": "atmo.cmm.servcore.digital.with.drawal",
+      "url": "BCOPAWEB01"
+    }
+  ],
+  "cdps": [
+    {
+      "project_name": "cdps.atualizar.contato.cadastro.java.url",
+      "url": "cdps-atualizar-contato-cadastro-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.atualizar.dados.conjuge.java.url",
+      "url": "cdps-atualizar-dados-conjuge-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.atualizar.dados.empregador.java.url",
+      "url": "cdps-atualizar-dados-empregador-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.campanhas.java.url",
+      "url": "cdps-campanhas-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.cmm.rest.java.url",
+      "url": "cdps-cmm-rest-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.consultar.informacoes.cliente.java.url",
+      "url": "cdps-consultar-informacoes-cliente-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.consultas.id.fisico.java.url",
+      "url": "cdps-consultas-id-fisico-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.dominios.java.url",
+      "url": "cdps-dominios-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.enriquecer.dados.tef.parcerias.java.url",
+      "url": "cdps-enriquecer-dados-tef-parcerias-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.officer.java.url",
+      "url": "cdps-officer-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.operacoes.clientes.java.url",
+      "url": "cdps-operacoes-clientes-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.orq.abertura.cadastro.java.url",
+      "url": "cdps-orq-abertura-cadastro-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.poderes.java.url",
+      "url": "cdps-poderes-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.rendas.java.url",
+      "url": "cdps-rendas-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.segmentos.java.url",
+      "url": "cdps-segmentos-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.validacao.posse.dados.java.url",
+      "url": "cdps-validacao-posse-dados-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.verificar.cliente.java.url",
+      "url": "cdps-verificar-cliente-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.sincronizacao.tabelas.java.url",
+      "url": "cdps-sincronizacao-tabelas-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.dados.cadastrais.nao.correntista.java.url",
+      "url": "cdps-dados-cadastrais-nao-correntista-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.consultar.informacoes.cliente.cartao.java.url",
+      "url": "cdps-consultar-informacoes-cliente-cartao-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.orq.cadastro.nao.correntista.java.url",
+      "url": "cdps-orq-cadastro-nao-correntista-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.documentos.nao.correntista.java.url",
+      "url": "cdps-documentos-nao-correntista-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.orq.dados.cadastrais.java.url",
+      "url": "cdps-orq-dados-cadastrais-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.pessoa.juridica.java.url",
+      "url": "cdps-pessoa-juridica-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.consulta.grupos.relacionamento.java.url",
+      "url": "cdps-consulta-grupos-relacionamento-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.consultar.informacoes.cliente.mint.java.url",
+      "url": "cdps-consultar-informacoes-cliente-mint-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.contas.clientes.java.url",
+      "url": "cdps-contas-clientes-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.dados.reduzidos.cliente.java.url",
+      "url": "cdps-dados-reduzidos-cliente-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps-atualizacao-dados-cadastrais-java.url",
+      "url": "cdps-atualizacao-dados-cadastrais-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.manutencao.prospect.java.url",
+      "url": "cdps-manutencao-prospect-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.validacao.dados.java.url",
+      "url": "cdps-validacao-dados-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.atualizar.cadastro.java.url",
+      "url": "cdps-atualizar-cadastro-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.servicos.cmm.java.url",
+      "url": "cdps-servicos-cmm-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.bens.cadastrados.java.url",
+      "url": "cdps-bens-cadastrados-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.empresas.java.url",
+      "url": "cdps-empresas-java.cdps.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "cdps.tratamento.cep.java.url",
+      "url": "cdps-tratamento-cep-java.cdps.svc.cluster.local:8080"
+    }
+  ],
+  "ctas": [
+    {
+      "project_name": "ctas.bloqueio.desbloqueio.conta.java.url",
+      "url": "ctas-bloqueio-desbloqueio-conta-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.cmm.rest.java.url",
+      "url": "ctas-cmm-rest-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.consultas.id.fisico.java.url",
+      "url": "ctas-consultas-id-fisico-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.consumidor.encerramento.contas.irregulares.java.url",
+      "url": "ctas-consumidor-encerramento-contas-irregulares-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.consumidor.transacoes.efetivar.java.url",
+      "url": "ctas-consumidor-transacoes-efetivar-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.consumidor.transacoes.emprestimo.java.url",
+      "url": "ctas-consumidor-transacoes-emprestimo-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.contas.java.url",
+      "url": "ctas-contas-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.credito.imediato.java.url",
+      "url": "ctas-credito-imediato-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.efetivar.credito.java.url",
+      "url": "ctas-efetivar-credito-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.efetivar.debito.java.url",
+      "url": "ctas-efetivar-debito-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.enriquecedor.transacoes.java.url",
+      "url": "ctas-enriquecedor-transacoes-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.extratos.java.url",
+      "url": "ctas-extratos-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.lancamentos.a.efetivar.java.url",
+      "url": "ctas-lancamentos-a-efetivar-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.orquestrador.transacoes.java.url",
+      "url": "ctas-orquestrador-transacoes-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.saldo.java.url",
+      "url": "ctas-saldo-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.sincronizacao.tabelas.java.url",
+      "url": "ctas-sincronizacao-tabelas-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.validar.aptidao.debito.parceiro.java.url",
+      "url": "ctas-validar-aptidao-debito-parceiro-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.validar.aptidao.transacao.conta.java.url",
+      "url": "ctas-validar-aptidao-transacao-conta-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.status.lancamentos.efetivar.java.url",
+      "url": "ctas-status-lancamentos-efetivar-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.orq.consultar.contas.saldos.java.url",
+      "url": "ctas-orq-consultar-contas-saldos-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.consulta.lancamentos.java.url",
+      "url": "ctas-consulta-lancamentos-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.bloqueio.desbloqueio.valores.java.url",
+      "url": "ctas-bloqueio-desbloqueio-valores-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.solicita.encerramento.java.url",
+      "url": "ctas-solicita-encerramento-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.lista.contas.java.url",
+      "url": "ctas-lista-contas-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.bloqueio.valores.webjud.java.url",
+      "url": "ctas-bloqueio-valores-webjud-java.ctas.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "ctas.debitos.pendentes.escuta.ativa.java.url",
+      "url": "ctas-debitos-pendentes-escuta-ativa-java.ctas.svc.cluster.local:8080"
+    }
+  ],
+  "fepw": [
+    {
+      "project_name": "fepw.cmm.rest.java.url",
+      "url": "fepw-cmm-rest-java.fepw.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "fepw.manutencao.java.url",
+      "url": "fepw-manutencao-java.fepw.svc.cluster.local:8080"
+    }
+  ],
+  "gcen": [
+    {
+      "project_name": "gcen.cmm.rest.java.url",
+      "url": "gcen-cmm-rest-java.gcen.svc.cluster.local:8080"
+    }
+  ],
+  "mcsv": [
+    {
+      "project_name": "mcsv.abertura.conta.documento.java.url",
+      "url": "mcsv-abertura-conta-documento-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.abertura.conta.pj.java.url",
+      "url": "mcsv-abertura-conta-pj-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.abertura.conta.pj.token.java.url",
+      "url": "mcsv-abertura-conta-pj-token-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.abertura.conta.token.java.url",
+      "url": "mcsv-abertura-conta-token-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.canais.internos.java.url",
+      "url": "mcsv-canais-internos-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.capital.giro.java.url",
+      "url": "mcsv-capital-giro-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.cartao.java.url",
+      "url": "mcsv-cartao-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.cartao.virtual.java.url",
+      "url": "mcsv-cartao-virtual-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.carteira.digital.java.url",
+      "url": "mcsv-carteira-digital-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.carteira.investimentos.java.url",
+      "url": "mcsv-carteira-investimentos-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.clientes.java.url",
+      "url": "mcsv-clientes-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.comprovante.renda.java.url",
+      "url": "mcsv-comprovante-renda-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.consulta.lite.id.java.url",
+      "url": "mcsv-consulta-lite-id-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.consultar.transacoes.parceiro.java.url",
+      "url": "mcsv-consultar-transacoes-parceiro-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.contas.java.url",
+      "url": "mcsv-contas-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.credito.pessoal.java.url",
+      "url": "mcsv-credito-pessoal-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.documentos.java.url",
+      "url": "mcsv-documentos-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.esqueci.minha.senha.java.url",
+      "url": "mcsv-esqueci-minha-senha-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.inclusao.lite.id.java.url",
+      "url": "mcsv-inclusao-lite-id-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.inclusao.lite.id.java.ocp.url",
+      "url": "mcsv-inclusao-lite-id-java-ocp.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.informacoes.investidor.java.url",
+      "url": "mcsv-informacoes-investidor-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.integrador.pagamentos.dict.java.url",
+      "url": "mcsv-integrador-pagamentos-dict-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.agenda.comercial.java.url",
+      "url": "mcsv-interno-agenda-comercial-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.analise.callback.java.url",
+      "url": "mcsv-interno-analise-callback-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.atualizacao.cadastral.java.url",
+      "url": "mcsv-interno-atualizacao-cadastral-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.cadastro.java.url",
+      "url": "mcsv-interno-cadastro-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.capital.giro.java.url",
+      "url": "mcsv-interno-capital-giro-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.cartoes.java.url",
+      "url": "mcsv-interno-cartoes-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.coleta.entrega.java.url",
+      "url": "mcsv-interno-coleta-entrega-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.consultas.callback.java.url",
+      "url": "mcsv-interno-consultas-callback-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.consultas.pix.java.url",
+      "url": "mcsv-interno-consultas-pix-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.contas.java.url",
+      "url": "mcsv-interno-contas-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.contato.cadastro.java.url",
+      "url": "mcsv-interno-contato-cadastro-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.contatos.java.url",
+      "url": "mcsv-interno-contatos-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.credito.imediato.java.url",
+      "url": "mcsv-interno-credito-imediato-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.credito.java.url",
+      "url": "mcsv-interno-credito-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.credito.pessoal.java.url",
+      "url": "mcsv-interno-credito-pessoal-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.debito.automatico.java.url",
+      "url": "mcsv-interno-debito-automatico-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.documentos.java.url",
+      "url": "mcsv-interno-documentos-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.esqueci.minha.senha.java.url",
+      "url": "mcsv-interno-esqueci-minha-senha-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.gerentes.java.url",
+      "url": "mcsv-interno-gerentes-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.gestao.limite.credito.java.url",
+      "url": "mcsv-interno-gestao-limite-credito-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.investimentos.java.url",
+      "url": "mcsv-interno-investimentos-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.manifestacao.java.url",
+      "url": "mcsv-interno-manifestacao-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.manifestacoes.java.url",
+      "url": "mcsv-interno-manifestacoes-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.pagamentos.java.url",
+      "url": "mcsv-interno-pagamentos-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.poderes.java.url",
+      "url": "mcsv-interno-poderes-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.prospects.java.url",
+      "url": "mcsv-interno-prospects-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.protocolos.java.url",
+      "url": "mcsv-interno-protocolos-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.renegociacao.java.url",
+      "url": "mcsv-interno-renegociacao-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.retencao.callback.java.url",
+      "url": "mcsv-interno-retencao-callback-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.rewards.java.url",
+      "url": "mcsv-interno-rewards-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.tarefas.ofertas.java.url",
+      "url": "mcsv-interno-tarefas-ofertas-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.interno.tarifas.java.url",
+      "url": "mcsv-interno-tarifas-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.limite.personalizado.java.url",
+      "url": "mcsv-limite-personalizado-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.liquidacao.ipva.java.url",
+      "url": "mcsv-liquidacao-ipva-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.liveness.url",
+      "url": "mcsv-liveness.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.liveness.acesso.digital.java.url",
+      "url": "mcsv-liveness-acesso-digital-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.liveness.appkey.java.url",
+      "url": "mcsv-liveness-appkey-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.manutencao.cartoes.java.url",
+      "url": "mcsv-manutencao-cartoes-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.manutencao.lite.id.java.url",
+      "url": "mcsv-manutencao-lite-id-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.maquina.pos.java.url",
+      "url": "mcsv-maquina-pos-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.mobile.mock.gw.java.url",
+      "url": "mcsv-mobile-mock-gw-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.open.banking.abertura.conta.java.url",
+      "url": "mcsv-open-banking-abertura-conta-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.open.banking.consentimentos.java.url",
+      "url": "mcsv-open-banking-consentimentos-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.open.banking.consultas.java.url",
+      "url": "mcsv-open-banking-consultas-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.pagamento.boletos.java.url",
+      "url": "mcsv-pagamento-boletos-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.pagamento.faturas.java.url",
+      "url": "mcsv-pagamento-faturas-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.pagamentos.pix.java.url",
+      "url": "mcsv-pagamentos-pix-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.parcelamento.faturas.java.url",
+      "url": "mcsv-parcelamento-faturas-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.permissao.optin.java.url",
+      "url": "mcsv-permissao-optin-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.pontos.rewards.java.url",
+      "url": "mcsv-pontos-rewards-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.produto.cartoes.cliente.java.url",
+      "url": "mcsv-produto-cartoes-cliente-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.proposta.limite.java.url",
+      "url": "mcsv-proposta-limite-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.renovacao.emprestimo.java.url",
+      "url": "mcsv-renovacao-emprestimo-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.rentabilidade.java.url",
+      "url": "mcsv-rentabilidade-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.solicita.encerramento.java.url",
+      "url": "mcsv-solicita-encerramento-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.token.atendimento.java.url",
+      "url": "mcsv-token-atendimento-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.transferencia.parceiro.java.url",
+      "url": "mcsv-transferencia-parceiro-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.desafios.senha.cartao.java.url",
+      "url": "mcsv-desafios-senha-cartao-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.consultas.cartoes.java.url",
+      "url": "mcsv-consultas-cartoes-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.abertura.conta.representante.pj.java.url",
+      "url": "mcsv-abertura-conta-representante-pj-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.informacoes.atendimento.java.url",
+      "url": "mcsv-informacoes-atendimento-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.cartao.goleiro.java.url",
+      "url": "mcsv-cartao-goleiro-java.mcsv.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "mcsv.debitos.pendentes.escuta.ativa.java.url",
+      "url": "mcsv-debitos-pendentes-escuta-ativa-java.mcsv.svc.cluster.local:8080"
+    }
+  ],
+  "parc": [
+    {
+      "project_name": "parc.abertura.cadastro.java.url",
+      "url": "parc-abertura-cadastro-java.parc.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "parc.informacoes.cadastro.java.url",
+      "url": "parc-informacoes-cadastro-java.parc.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "parc.dados.cadastrais.parcerias.java.url",
+      "url": "parc-dados-cadastrais-parcerias-java.parc.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "parc.produtos.java.url",
+      "url": "parc-produtos-java.parc.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "parc.callback.java.url",
+      "url": "parc-callback-java.parc.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "parc.oferta.produto.java.url",
+      "url": "parc-oferta-produto-java.parc.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "parc.oferta.produto.callback.java.url",
+      "url": "parc-oferta-produto-callback-java.parc.svc.cluster.local:8080"
+    }
+  ],
+  "rtto": [
+    {
+      "project_name": "rtto.cet.java.url",
+      "url": "rtto-cet-java.rtto.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "rtto.consultar.cheque.especial.java.url",
+      "url": "rtto-consultar-cheque-especial-java.rtto.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "rtto.operacoes.java.url",
+      "url": "rtto-operacoes-java.rtto.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "rtto.operacoes.renegociacao.java.url",
+      "url": "ms-rtto-operacoes-renegociacao.ms.prod"
+    },
+    {
+      "project_name": "rtto.manutencao.limite.java.url",
+      "url": "rtto-manutencao-limite-java.rtto.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "rtto.consultar.contrato.cheque.especial.java",
+      "url": "rtto-consultar-contrato-cheque-especial-java.rtto.svc.cluster.local:8080"
+    }
+  ],
+  "tbgr": [
+    {
+      "project_name": "tbgr.bancos.java.url",
+      "url": "tbgr-bancos-java.tbgr.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "tbgr.canais.java.url",
+      "url": "tbgr-canais-java.tbgr.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "tbgr.canal.cartorios.java.url",
+      "url": "tbgr-canal-cartorios-java.tbgr.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "tbgr.cartorios.java.url",
+      "url": "tbgr-cartorios-java.tbgr.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "tbgr.consulta.regras.java.url",
+      "url": "tbgr-consulta-regras-java.tbgr.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "tbgr.consultas.java.url",
+      "url": "tbgr-consultas-java.tbgr.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "tbgr.dias.uteis.java.url",
+      "url": "tbgr-dias-uteis-java.tbgr.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "tbgr.sincronizacao.tabelas.java.url",
+      "url": "tbgr-sincronizacao-tabelas-java.tbgr.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "tbgr.usuario.sistema.java.url",
+      "url": "tbgr-usuario-sistema-java.tbgr.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "tbgr.produtos.java.url",
+      "url": "tbgr-produtos-java.tbgr.svc.cluster.local:8080"
+    },
+    {
+      "project_name": "tbgr.dominios.java.url",
+      "url": "tbgr-dominios-java.tbgr.svc.cluster.local:8080"
+    }
+  ],
+  "trfo": [
+    {
+      "project_name": "trfo.cmm.rest.java.url",
+      "url": "trfo-cmm-rest-java.trfo.svc.cluster.local:8080"
+    }
+  ]
+}
