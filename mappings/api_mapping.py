@@ -2,7 +2,7 @@ import re
 
 from dotenv import load_dotenv
 
-from gitlab_ops import get_file_data, get_repo_files, gitlab_api
+from resources.gitlab_ops import get_file_data, get_repo_files, gitlab_api
 from resources import (
   application_properties_files,
   application_properties_regex,

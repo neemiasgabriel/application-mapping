@@ -3,7 +3,7 @@ import re
 
 from dotenv import load_dotenv
 
-from gitlab_ops import get_file_data, gitlab_api
+from resources.gitlab_ops import get_file_data, gitlab_api
 from resources import fernanda_acronyns
 
 load_dotenv()

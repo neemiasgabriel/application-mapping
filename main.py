@@ -1,7 +1,7 @@
-from gitlab_ops import gitlab_api
+from resources.gitlab_ops import gitlab_api
 from mappings.fwms_mapping import search_project_names_by_acronyms
-from project_representation import build_graph_representation
-from api_representation import build_api_representation
+from mappings.project_mapping import build_graph_representation
+from mappings.api_mapping import build_api_representation
 
 
 from resources import fernanda_acronyns
