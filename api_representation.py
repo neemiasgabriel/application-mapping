@@ -168,6 +168,9 @@ def build_api_representation(api) -> dict:
 
   return dictionary
 
+"""
+Test local output
+"""
 if __name__ == '__main__':
   gl = gitlab_api()
   acronym_dictionary = build_api_representation(gl)

@@ -132,6 +132,9 @@ def build_graph_representation(projects, fwms_mapping):
   return representation
 
 
+"""
+Test local output
+"""
 if __name__ == '__main__':
   fernanda_projects = load_file('files/fernanda_projects_dictionary.json')
   api_projects = load_file('files/acronym_dictionary.json')

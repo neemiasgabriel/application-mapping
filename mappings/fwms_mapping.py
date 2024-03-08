@@ -64,6 +64,9 @@ def search_project_names_by_acronyms(gl, acronym_list) -> dict:
 
   return dictionary
 
+"""
+Test local output
+"""
 if __name__ == '__main__':
   dictionary = search_project_names_by_acronyms(gitlab_api(), fernanda_acronyns)
 
