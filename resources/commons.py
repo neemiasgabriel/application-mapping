@@ -29,6 +29,13 @@ def save_dictionary(projects_dict, file_name):
     except json.decoder.JSONDecodeError:
       print(projects_dict)
 
+def save_with_path(projects_dict, file_path):
+  with open(file_path, 'w') as f:
+    try:
+      json.dump(projects_dict, f)
+    except json.decoder.JSONDecodeError:
+      print(projects_dict)
+
 def load_dictionary(path):
   with open(path, 'a+') as f:
     try:

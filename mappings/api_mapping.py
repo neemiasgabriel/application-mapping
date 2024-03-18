@@ -97,7 +97,7 @@ def bootstrap_data_mapping(project, filtered_list):
 
 def build_representation(api, acronym, dictionary) -> dict:
   """
-  A função constroi a representação de um projeto, baseado na sigla passada como parâmetro.
+  A função constroi a representação da lista de projetos, baseado na sigla passada como parâmetro.
 
   Parâmetros:
   :param api: Uma instância da API do Gitlab

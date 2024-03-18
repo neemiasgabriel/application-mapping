@@ -1,5 +1,5 @@
 from resources import fernanda_acronyns
-from resources.commons import load_file, save_dictionary
+from resources.commons import load_file, save_with_path
 
 
 def get_integrations(project):
@@ -18,10 +18,7 @@ def get_integrations(project):
 def get_feign_urls(project):
   feign = project.get('feign')
 
-  if feign is None:
-    return set()
-
-  return set(feign['url'] for feign in feign)
+  return set() if feign is None else set(feign['url'] for feign in feign)
 
 
 def get_application_urls(project, application_name):
@@ -32,10 +29,7 @@ def get_application_urls(project, application_name):
 
   application_env = application.get(application_name)
 
-  if application_env is None:
-    return set()
-
-  return set(url['url_text'] for url in application_env)
+  return set() if application_env is None else set(url['url_text'] for url in application_env)
 
 
 def add_entry(dictionary, acronym, project):
@@ -43,7 +37,7 @@ def add_entry(dictionary, acronym, project):
     dictionary[acronym] = {}
 
   if dictionary[acronym].get(project) is None:
-    dictionary[acronym][project] = []
+    dictionary[acronym][project] = set()
 
   return dictionary
 
@@ -55,7 +49,7 @@ def append_feign_to_representation(dictionary, fwms_acronym, projects_name_list,
     if current_name in application:
       current_name = project_name.replace('.url', '').replace('.', '-')
       dictionary = add_entry(dictionary, fwms_acronym, current_name)
-      dictionary[fwms_acronym][current_name].append(project)
+      dictionary[fwms_acronym][current_name].add(project)
 
 
 def append_application_files_to_representation(dictionary, fwms_acronym, projects_name_list, application, project):
@@ -64,7 +58,7 @@ def append_application_files_to_representation(dictionary, fwms_acronym, project
 
     if current_name in application:
       dictionary = add_entry(dictionary, fwms_acronym, current_name)
-      dictionary[fwms_acronym][current_name].append(project)
+      dictionary[fwms_acronym][current_name].add(project)
 
 
 def generate_representation(dictionary, application_urls, fwms_mapping, project, is_feign=False):
@@ -127,7 +121,7 @@ def build_graph_representation(projects, fwms_mapping):
 
   for acronym in representation.keys():
     for project in representation[acronym].keys():
-      representation[acronym][project] = list(set(representation[acronym][project]))
+      representation[acronym][project] = list(representation[acronym][project])
 
   return representation
 
@@ -141,4 +135,4 @@ if __name__ == '__main__':
 
   representation = build_graph_representation(api_projects, fernanda_projects)
 
-  save_dictionary(representation, 'representation')
+  save_with_path(representation, '../files/representation.json')
